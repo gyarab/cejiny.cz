@@ -15,9 +15,9 @@ public class MyServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("serverInfo: " + getServletContext().getServerInfo());
 
-        try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb?user=postgres&password=020201vscvvo");
+        try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdata?user=postgres&password=020201vscvvo");
              Statement stmt = conn.createStatement()) {
-            stmt.executeQuery("CREATE TABLE test3(id INTEGER)");
+            stmt.executeQuery("CREATE TABLE test(id INTEGER)");
         } catch (SQLException ex) {
             out.println(ex);
         };
