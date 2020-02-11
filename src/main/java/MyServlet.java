@@ -21,7 +21,6 @@ public class MyServlet extends HttpServlet {
         } catch (SQLException ex) {
             out.println(ex);
         }
-        ;
 
         out.println("</body></html>");
     }
