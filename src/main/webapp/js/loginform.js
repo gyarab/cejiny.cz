@@ -1,9 +1,8 @@
 $().ready(function() {
     $("#loginForm").validate({
         rules: {
-            email: {
+            username: {
                 required: true,
-                email: true
             },
 
             password:{
@@ -12,9 +11,8 @@ $().ready(function() {
         },
 
         messages: {
-            email: {
-                required: "Please enter email",
-                email: "Please enter a valid email address"
+            username: {
+                required: "Please enter username",
             },
 
             password: "Please enter password"

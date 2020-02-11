@@ -18,14 +18,14 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/loginform.js"></script>
+    <script type="text/javascript" src="../js/loginform.js"></script>
 </head>
 <body>
 <div style="text-align: center">
     <h1>Admin Login</h1>
-    <form action="login" method="post" id="loginForm">
-        <label for="email">Email:</label>
-        <input id="email" name="email" size="45"/>
+    <form action="${pageContext.request.contextPath}/admin/login" method="post" id="loginForm">
+        <label for="username">Username:</label>
+        <input id="username" name="username" size="45"/>
         <br><br>
         <label for="password">Password:</label>
         <input id="password" type="password" name="password" size="45"/>

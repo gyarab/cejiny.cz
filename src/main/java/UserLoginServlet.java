@@ -4,9 +4,8 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/login")
+@WebServlet("/admin/login")
 public class UserLoginServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
 
     public UserLoginServlet() {
         super();
@@ -14,7 +13,7 @@ public class UserLoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String email = request.getParameter("email");
+        String email = request.getParameter("username");
         String password = request.getParameter("password");
 
         UserDAO userDao = new UserDAO();
@@ -25,10 +24,10 @@ public class UserLoginServlet extends HttpServlet {
 
             if (user != null) {
                 HttpSession session = request.getSession();
-                session.setAttribute("user", user);
+                session.setAttribute("adminUser", user);
                 destPage = "home.jsp";
             } else {
-                String message = "Invalid email/password";
+                String message = "Invalid username/password";
                 request.setAttribute("message", message);
             }
 

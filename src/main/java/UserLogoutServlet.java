@@ -4,9 +4,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("/logout")
+@WebServlet("/admin/logout")
 public class UserLogoutServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
 
     public UserLogoutServlet() {
         super();
@@ -16,7 +15,7 @@ public class UserLogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
-            session.removeAttribute("user");
+            session.removeAttribute("adminUser");
 
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
