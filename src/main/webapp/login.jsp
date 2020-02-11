@@ -25,11 +25,11 @@
     <h1>Admin Login</h1>
     <form action="login" method="post" id="loginForm">
         <label for="email">Email:</label>
-        <input id="email" name="email" size="45" />
+        <input id="email" name="email" size="45"/>
         <br><br>
         <label for="password">Password:</label>
-        <input id="password" type="password" name="password" size="45" />
-        <br>
+        <input id="password" type="password" name="password" size="45"/>
+        <br>${message}
         <br><br>
         <button type="submit">Login</button>
     </form>

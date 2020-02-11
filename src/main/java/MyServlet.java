@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import java.io.*;
 import java.sql.*;
 
-@WebServlet("/test")
+@WebServlet("/testfunc")
 public class MyServlet extends HttpServlet {
 
     @Override
@@ -14,13 +14,14 @@ public class MyServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("serverInfo: " + getServletContext().getServerInfo());
-
-        try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdata?user=postgres&password=020201vscvvo");
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdata?user=postgres&password=020201vscvvo");
+        try (Connection conn = DriverManager.getConnection(System.getenv("DATABASE_URL"));
              Statement stmt = conn.createStatement()) {
             stmt.executeQuery("CREATE TABLE test(id INTEGER)");
         } catch (SQLException ex) {
             out.println(ex);
-        };
+        }
+        ;
 
         out.println("</body></html>");
     }
