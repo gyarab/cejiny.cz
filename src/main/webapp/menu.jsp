@@ -25,7 +25,7 @@
 </style>
 <body>
 <div class="w3-container w3-left" style="margin-top: 10px">
-    <a href="http://cejiny.appspot.com"><img src="images/cejinymain.png" alt="cejinymainlogo"></a>
+    <a href="https://cejiny.herokuapp.com/"><img src="images/cejinymain.png" alt="cejinymainlogo"></a>
 </div>
 
 <section class="w3-container">
