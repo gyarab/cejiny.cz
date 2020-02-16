@@ -12,10 +12,10 @@ $().ready(function() {
 
         messages: {
             username: {
-                required: "Please enter username",
+                required: "Zadejte přezdívku",
             },
 
-            password: "Please enter password"
+            password: "Zadejte heslo"
         }
     });
 

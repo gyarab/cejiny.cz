@@ -27,7 +27,7 @@ public class UserLoginServlet extends HttpServlet {
                 session.setAttribute("adminUser", user);
                 destPage = "home.jsp";
             } else {
-                String message = "Invalid username/password";
+                String message = "Špatné heslo/přezdívka";
                 request.setAttribute("message", message);
             }
 
