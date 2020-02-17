@@ -19,6 +19,7 @@
     <b>${adminUser.username}</b>
     <br><br>
     <a href="${pageContext.request.contextPath}/admin/logout">Logout</a>
+    <a href="addNewTest">Přidat test</a>
 </div>
 </body>
 </html>
