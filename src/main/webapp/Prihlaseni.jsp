@@ -10,7 +10,7 @@
 <head>
     <title>Čejiny.cz</title>
     <meta name="google-signin-client_id"
-          content="924801925433-0s7dlavkl7d8qtsql4kklgt2mn8c06ov.apps.googleusercontent.com">
+          content="744440410349-5dhhsjkng45ceck1h31rpcubhp9tf7qh.apps.googleusercontent.com">
     <jsp:include page="menu.jsp"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
