@@ -5,8 +5,8 @@ public class UserDAO {
 
     public User checkLogin(String username, String password) throws SQLException {
 
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdata?user=postgres&password=020201vscvvo");
-        //Connection conn = DriverManager.getConnection(System.getenv("DATABASE_URL"));
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/userdata?user=postgres&password=020201vscvvo");
+        Connection conn = DriverManager.getConnection(System.getenv("DATABASE_URL"));
         String sql = "SELECT * FROM admin WHERE username = ? AND password = crypt(?, password);";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, username);
