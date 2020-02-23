@@ -21,6 +21,7 @@
 
 
 </div>
+<div id="content"></div>
 
 
 </body>
