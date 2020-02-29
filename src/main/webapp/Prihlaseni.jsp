@@ -13,49 +13,15 @@
           content="744440410349-5dhhsjkng45ceck1h31rpcubhp9tf7qh.apps.googleusercontent.com">
     <jsp:include page="menu.jsp"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="js/googleintegration.js"></script>
 </head>
 <body>
 <div class="w3-card w3-margin-left">
-    <div class="w3-container w3-black">
-        <h2>You shall not pass!</h2>
-    </div>
-    <%-- Google Sign-in button --%>
-    <div id="my-signin2"></div>
-    <script>
-        function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        }
-
-        function onFailure(error) {
-            console.log(error);
-        }
-
-        function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 200,
-                'height': 50,
-                'theme': 'dark',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-        }
-    </script>
-
+    <%-- Google Sign-in/Sign-out button --%>
+    <a style="text-decoration: none" href="#" id="my-signin2"></a>
+        <a id="signout" href="#" onclick="signOut();">Sign out</a>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-    <%--
-    <form class="w3-container">
 
-        <label>Email</label>
-        <input class="w3-input" type="email" placeholder="Zadejte Váš email">
-
-        <label>Heslo</label>
-        <input class="w3-input" type="text" placeholder="Zadejte heslo">
-
-    </form>
---%>
 </div>
-
-
 </body>
 </html>

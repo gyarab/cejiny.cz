@@ -16,7 +16,7 @@
 <div class="w3-container w3-mobile">
   <div class="w3-left-align">
     <p>Vítejte na stránkách Čejiny.cz</p>
-    <p>Tento projekt je provozován skupinou abiciózních mládežníků,
+    <p>Tento projekt je provozován skupinou ambiciózních mládežníků,
       kteří si chtějí našetřit na Cybertruck.</p>
     <p>Hlavním cílem našeho projektu je ale přiblížení českých dějin žákům a studentům naší generace,
       kteří mají místo mozolů skoliózu a místo mozku USB. Proto neváhejte a porozhlédněte se po naší

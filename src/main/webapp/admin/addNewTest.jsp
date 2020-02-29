@@ -15,7 +15,7 @@
         <option value="1">Testová - 1 správně</option>
         <option value="2">Testová - více správně</option>
         <option value="3">Časová osa</option>
-        <option value="3">Přiřazovací</option>
+        <option value="4">Přiřazovací</option>
     </select>
 
 
