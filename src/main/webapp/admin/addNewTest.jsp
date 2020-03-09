@@ -6,11 +6,20 @@
     <title>Přidat test</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script type="text/javascript" src="../js/addTest.js"></script>
+    <style>
+        input{
+            width: 100%;
 
+        }
+        .center{
+            margin: auto;
+            width:50%
+        }
+    </style>
 </head>
 <body>
-<div class="w3-container">
-    <select class="w3-select" name="option" onchange="add(this.selectedIndex)">
+<div class="w3-container center">
+    <select class="w3-select" name="option" id="option" onchange="addingForm()">
         <option value="" disabled selected>Vyberte druh otázky</option>
         <option value="1">Testová - 1 správně</option>
         <option value="2">Testová - více správně</option>
@@ -21,7 +30,7 @@
 
 
 </div>
-<div id="content"></div>
+<div id="content" class="w3-container center"></div>
 
 
 </body>
