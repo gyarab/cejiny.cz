@@ -10,16 +10,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8">
     <title>Admin CPanel</title>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 <div style="text-align: center">
-    <h1>Welcome to Website Admin Panel</h1>
-    <b>${adminUser.username}</b>
+    <h1>Čejiny Admin Panel</h1>
+    <b>Uživatel: ${adminUser.username}</b>
     <br><br>
-    <a href="${pageContext.request.contextPath}/admin/logout">Logout</a>
-    <a href="addNewTest.jsp">Přidat test</a>
+    <a class="w3-button w3-black" href="${pageContext.request.contextPath}/admin/logout">Logout</a>
+    <a class="w3-button w3-black" href="addNewTest.jsp">Přidat test</a>
+    <a class="w3-button w3-black" href="lekce.jsp">Lekce</a>
 </div>
 </body>
 </html>

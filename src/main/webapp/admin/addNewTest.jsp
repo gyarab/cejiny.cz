@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Přidat test</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <script type="text/javascript" src="../js/addTest.js"></script>
     <style>
         input{

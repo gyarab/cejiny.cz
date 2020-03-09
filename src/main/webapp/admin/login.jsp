@@ -19,6 +19,8 @@
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
     <script type="text/javascript" src="../js/loginform.js"></script>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 <div style="text-align: center">
@@ -31,7 +33,7 @@
         <input id="password" type="password" name="password" size="45"/>
         <br>${message}
         <br><br>
-        <button type="submit">Login</button>
+        <button class="w3-btn w3-black" type="submit">Login</button>
     </form>
 </div>
 </body>
