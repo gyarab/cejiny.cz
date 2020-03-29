@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<div style="text-align: center"><a class="w3-button w3-black" href="addNewLesson.html">Přidat lekci</a></div>
+<div style="text-align: center"><a class="w3-button w3-black" href="addNewLesson.html">Přidat lekci</a>
+    <a class="w3-button w3-black" href="home.jsp">Zpět</a>
+</div>
 </body>
 </html>

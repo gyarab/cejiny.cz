@@ -12,21 +12,11 @@
       content="744440410349-5dhhsjkng45ceck1h31rpcubhp9tf7qh.apps.googleusercontent.com">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="css/sitesize.css">
 <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="text/javascript" src="js/googleintegration.js"></script>
-<style>
-    html, body {
 
-        width: auto;
-        max-width: 1500px;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0;
-
-    }
-
-</style>
 <body>
 <div class="w3-container w3-left" style="margin-top: 10px">
     <a href="https://cejiny.herokuapp.com/"><img src="images/cejinymain.png" alt="cejinymainlogo"></a>
