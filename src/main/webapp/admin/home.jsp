@@ -12,7 +12,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Admin CPanel</title>
+    <title>Admin Panel</title>
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>

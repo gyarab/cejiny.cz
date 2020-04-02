@@ -10,9 +10,18 @@
             referrerpolicy="origin"></script>
 </head>
 <body>
-<div style="text-align: center"><textarea>
-    Welcome to TinyMCE!
-  </textarea></div>
+
+<div>
+    <form action="created.jsp" method="POST">
+        <br>
+        <label for="filename">Název souboru: </label>
+        <input type="text" id="filename" name="filename"><br>
+        <br>
+        <textarea name="textarea"></textarea>
+        <br>
+        <input class="w3-button w3-black" type="SUBMIT" value="Vytvořit">
+    </form>
+</div>
 
 <script>
     tinymce.init({
