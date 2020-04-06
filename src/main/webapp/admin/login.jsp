@@ -19,6 +19,7 @@
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
     <script type="text/javascript" src="../js/loginform.js"></script>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -34,6 +35,7 @@
         <br>${message}
         <br><br>
         <button class="w3-btn w3-black" type="submit">Login</button>
+        <a href="../index.jsp" class="w3-black w3-button"><i class="fas fa-home"></i></a>
     </form>
 </div>
 </body>
