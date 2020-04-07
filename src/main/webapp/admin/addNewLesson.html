@@ -9,19 +9,37 @@
     <title>Přidat Lekci</title>
     <script src="https://cdn.tiny.cloud/1/0yejmvwyxohdxoq5i01ugclsiuvc5jx31i5kv3qeox97g1pn/tinymce/5/tinymce.min.js"
             referrerpolicy="origin"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script type="text/javascript" src="../js/lekceForm.js"></script>
 </head>
 <body>
 
 <div>
-    <form action="lekceCreated.jsp" method="POST" accept-charset="UTF-8">
+    <form action="lekceCreated.jsp" method="POST" accept-charset="UTF-8" id="lekceForm">
         <br>
-        <label for="filename">Název souboru: </label>
-        <input type="text" id="filename" name="filename"><br>
+        <label for="lekcename">Název lekce:</label>
+
+        <input type="text" id="lekcename" name="lekcename"><br>
+        <br>
+        <label for="category">Kategorie:</label>
+
+        <select id="category" name="category">
+            <option value="poveryopocatcich">Pověry o počátcích</option>
+            <option value="starovek">Starověk</option>
+            <option value="stredovek">Středověk</option>
+            <option value="novovek">Novověk</option>
+        </select>
+        <br>
         <br>
         <textarea name="textarea"></textarea>
         <br>
         <input class="w3-button w3-black" type="SUBMIT" value="Vytvořit">
-        <a href="home.jsp" class="w3-button w3-black">Zpět</a>
+        <a href="lekce.jsp" class="w3-button w3-black">Zpět</a>
     </form>
 
 </div>

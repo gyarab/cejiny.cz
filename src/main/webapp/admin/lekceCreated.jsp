@@ -1,5 +1,6 @@
 <%@ page import="com.sun.org.apache.xerces.internal.impl.xpath.XPath" %>
 <%@page import="java.io.*" %>
+<%@ page import="java.text.Normalizer" %>
 <%--
   Created by IntelliJ IDEA.
   User: Vojta
@@ -13,16 +14,19 @@
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/sitesize.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
     <meta charset="UTF-8">
     <title>Created</title>
 </head>
 <body>
 <h1>Nová lekce byla úspěšně vytvořena!</h1>
 <br>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<a href="home.jsp" class="w3-button w3-black" style="text-align: center"><i class="fas fa-tools"></i> Admin Panel</a>
 <%
     request.setCharacterEncoding("UTF-8");
-    String filename = request.getParameter("filename") + ".jsp";
+    String lekcename = request.getParameter("lekcename");
+    String lowerNormalizedLekcename = lekcename.replaceAll(" ", "_").toLowerCase().replaceAll("[.|,]", "");
+    String filename = Normalizer.normalize(lowerNormalizedLekcename, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "") + ".jsp";
     String lekcePath = "src/main/webapp/lekce/";
     String text = request.getParameter("textarea");
     File strFile = new File(lekcePath + filename);
@@ -32,15 +36,16 @@
     String cast2 = "<html>\n" +
             "\n" +
             "<head>\n" +
-            "    <title>Čejiny.cz</title>\n" +
+            "    <title>";
+    String cast3 = "</title>\n" +
             "    <jsp:include page=\"../menulekce.jsp\"/>\n" +
             "</head>\n" +
             "<body>\n" +
             "<div class=\"w3-container w3-left\">\n";
-    String cast3 = "</div>" +
+    String cast4 = "</div>\n" +
             "</body>\n" +
             "</html>";
-    objWriter.write(cast1 + cast2 + text + "\n" + cast3);
+    objWriter.write(cast1 + cast2 + lekcename + cast3 + text + "\n" + cast4);
     objWriter.flush();
     objWriter.close();
 %>
