@@ -12,14 +12,21 @@
       content="744440410349-5dhhsjkng45ceck1h31rpcubhp9tf7qh.apps.googleusercontent.com">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
-<link rel="stylesheet" href="css/sitesize.css">
-<link rel='icon' href='images/favicon.ico' type='image/x-icon'>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/sitesize.css">
+<link rel='icon' href='${pageContext.request.contextPath}/images/favicon.ico' type='image/x-icon'>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script type="text/javascript" src="js/googleintegration.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/googleintegration.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
 
 <body>
 <div class="w3-container w3-left" style="margin-top: 10px">
-    <a href="https://cejiny.herokuapp.com/"><img src="images/cejinymain.png" alt="cejinymainlogo"></a>
+    <a href="https://cejiny.herokuapp.com/"><img src="${pageContext.request.contextPath}/images/cejinymain.png"
+                                                 alt="cejinymainlogo"></a>
 </div>
 
 <section class="w3-container">
@@ -29,7 +36,7 @@
             <button class="w3-button w3-hover-red"><i class="fas fa-book fa-lg"></i> Lekce
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
-                <a href="Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
+                <a href="${pageContext.request.contextPath}/Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile">Seznam všech lekcí</a>
             </div>
         </div>
@@ -38,7 +45,7 @@
             <button class="w3-button w3-hover-red"><i class="fas fa-brain fa-lg"></i> Testy
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
-                <a href="Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
+                <a href="${pageContext.request.contextPath}/Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
                 <a href="#" class="w3-bar-item w3-button w3-mobile">Seznam všech testů</a>
             </div>
         </div>
