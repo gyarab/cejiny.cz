@@ -11,9 +11,9 @@
     <meta charset="utf-8">
     <title>Lekce</title>
     <%@page import="java.sql.*" %>
-    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='${pageContext.request.contextPath}/images/favicon.ico' type='image/x-icon'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../css/tableLekceAdmin.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/tableLekceAdmin.css">
 </head>
 <body>
 <br>

@@ -13,9 +13,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='${pageContext.request.contextPath}/images/favicon.ico' type='image/x-icon'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../css/sitesize.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sitesize.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
     <meta charset="UTF-8">
     <title>Created</title>
