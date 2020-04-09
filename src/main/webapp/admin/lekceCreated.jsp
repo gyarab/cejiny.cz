@@ -54,22 +54,23 @@
     objWriter.flush();
     objWriter.close();
     // konec vytvareni souboru, databaze
-    /*
+
     String category = request.getParameter("category");
 
     Connection conn = null;
     try {
         conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        String sql = "";
+        String sql = "insert into lekce (name, path, category) values(?,?,?)";
         PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setString(1, username);
-        statement.setString(2, password);
-
+        statement.setString(1, lekcename);
+        statement.setString(2, path);
+        statement.setString(3, category);
         ResultSet result = statement.executeQuery();
+        conn.close();
     } catch (SQLException e) {
         e.printStackTrace();
     }
-*/
+
 %>
 </body>
 </html>
