@@ -36,17 +36,19 @@
             <button class="w3-button w3-hover-red"><i class="fas fa-book fa-lg"></i> Lekce
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
-                <a href="${pageContext.request.contextPath}/Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile">Seznam všech lekcí</a>
+                <a href="${pageContext.request.contextPath}/KategorieLekce.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
+                <a href="${pageContext.request.contextPath}/SeznamLekci.jsp" class="w3-bar-item w3-button w3-mobile">Seznam
+                    všech lekcí</a>
             </div>
         </div>
 
-        <div class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-mobile">
+        <div id="testyHide" class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-mobile">
             <button class="w3-button w3-hover-red"><i class="fas fa-brain fa-lg"></i> Testy
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
-                <a href="${pageContext.request.contextPath}/Kategorie.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile">Seznam všech testů</a>
+                <a href="${pageContext.request.contextPath}/KategorieTesty.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
+                <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile">Seznam
+                    všech testů</a>
             </div>
         </div>
 

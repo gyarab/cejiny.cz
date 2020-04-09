@@ -7,6 +7,7 @@ function onSuccess(googleUser) {
     document.getElementById("my-signin2").style.visibility = "hidden";
     document.getElementById("setUserProfileName").innerHTML = profile.getName()
     document.getElementById("userHide").style.visibility = "visible";
+    document.getElementById("testyHide").style.visibility = "visible";
 }
 
 function onFailure(error) {
@@ -24,6 +25,7 @@ function renderButton() {
     });
     document.getElementById("signout").style.visibility = "hidden";
     document.getElementById("userHide").style.visibility = "hidden";
+    document.getElementById("testyHide").style.visibility = "hidden";
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -33,5 +35,6 @@ function signOut() {
     document.getElementById("signout").style.visibility = "hidden";
     document.getElementById("my-signin2").style.visibility = "visible";
     document.getElementById("userHide").style.visibility = "hidden";
+    document.getElementById("testyHide").style.visibility = "hidden";
     location.reload();
 }
