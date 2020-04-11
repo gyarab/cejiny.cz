@@ -1,7 +1,6 @@
-<%@ page import="com.sun.org.apache.xerces.internal.impl.xpath.XPath" %>
-<%@page import="java.io.*" %>
+<%@ page import="java.io.*" %>
+<%@page import="java.sql.*" %>
 <%@ page import="java.text.Normalizer" %>
-<%@ page import="java.sql.*" %>
 <%--
   Created by IntelliJ IDEA.
   User: Vojta
@@ -19,11 +18,7 @@
     <meta charset="UTF-8">
     <title>Created</title>
 </head>
-<body>
-<h1>Nová lekce byla úspěšně vytvořena!</h1>
-<br>
-<a href="home.jsp" class="w3-button w3-black" style="text-align: center"><i class="fas fa-tools"></i> Admin Panel</a>
-<!--<a href="" class="w3-button w3-black" style="text-align: center"><i class="far fa-eye"></i> Vytvořená lekce</a>-->
+<body style="text-align: center">
 <%
     request.setCharacterEncoding("UTF-8");
     String lekcename = request.getParameter("lekcename");
@@ -32,46 +27,61 @@
     String mainPath = "src/main/webapp/lekce/";
     String text = request.getParameter("textarea");
     String pathCreate = mainPath + filename;
-    File strFile = new File(pathCreate);
-    boolean fileCreated = strFile.createNewFile();
-    Writer objWriter = new BufferedWriter(new FileWriter(strFile));
-    String cast1 = "<" + "%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %" + ">\n";
-    String cast2 = "<html>\n" +
-            "\n" +
-            "<head>\n" +
-            "    <title>";
-    String cast3 = "</title>\n" +
-            "    <jsp:include page=\"../menu.jsp\"/>\n" +
-            "</head>\n" +
-            "<body>\n" +
-            "<div class=\"w3-container w3-mobile\">\n" +
-            "<div class=\"w3-left-align\">";
-    String cast4 = "</div>\n" +
-            "</div>" +
-            "</body>\n" +
-            "</html>";
-    objWriter.write(cast1 + cast2 + lekcename + cast3 + text + "\n" + cast4);
-    objWriter.flush();
-    objWriter.close();
-    // konec vytvareni souboru, databaze
-
-    String category = request.getParameter("category");
-    String pathdb = "/lekce/" + filename;
-
-    Connection conn = null;
+    String vysledek = "";
     try {
-        conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        String sql = "insert into lekce (name, path, category) values(?,?,?)";
-        PreparedStatement statement = conn.prepareStatement(sql);
-        statement.setString(1, lekcename);
-        statement.setString(2, pathdb);
-        statement.setString(3, category);
-        ResultSet result = statement.executeQuery();
-        conn.close();
-    } catch (SQLException e) {
+        File strFile = new File(pathCreate);
+        if (strFile.createNewFile()) {
+            vysledek = "Nová lekce byla úspěšně vytvořena!";
+            Writer objWriter = new BufferedWriter(new FileWriter(strFile));
+            String cast1 = "<" + "%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %" + ">\n";
+            String cast2 = "<html>\n" +
+                    "\n" +
+                    "<head>\n" +
+                    "    <title>";
+            String cast3 = "</title>\n" +
+                    "    <jsp:include page=\"../menu.jsp\"/>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<div class=\"w3-container w3-mobile\">\n" +
+                    "<div class=\"w3-left-align\">";
+            String cast4 = "</div>\n" +
+                    "</div>" +
+                    "</body>\n" +
+                    "</html>";
+            objWriter.write(cast1 + cast2 + lekcename + cast3 + text + "\n" + cast4);
+            objWriter.flush();
+            objWriter.close();
+            // konec vytvareni souboru, databaze
+
+            String category = request.getParameter("category");
+            String pathdb = "/lekce/" + filename;
+
+            Connection conn = null;
+            try {
+                conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+                String sql = "insert into lekce (name, path, category) values(?,?,?)";
+                PreparedStatement statement = conn.prepareStatement(sql);
+                statement.setString(1, lekcename);
+                statement.setString(2, pathdb);
+                statement.setString(3, category);
+                ResultSet result = statement.executeQuery();
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            vysledek = "Lekce s tímto názvem již existuje!";
+        }
+    } catch (IOException e) {
         e.printStackTrace();
     }
 
+
 %>
+<h1><%=vysledek%>
+</h1>
+<br>
+<a href="home.jsp" class="w3-button w3-black" style="text-align: center"><i class="fas fa-tools"></i> Admin Panel</a>
+<!--<a href="" class="w3-button w3-black" style="text-align: center"><i class="far fa-eye"></i> Vytvořená lekce</a>-->
 </body>
 </html>
