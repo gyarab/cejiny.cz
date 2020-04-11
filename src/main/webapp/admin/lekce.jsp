@@ -27,7 +27,7 @@
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("select * from lekce;");
 %>
-<table class="paleBlueRows" align=center>
+<table class="paleBlueRows">
     <thead>
     <tr>
         <th>ID</th>
@@ -40,6 +40,12 @@
     <tbody>
     <%
         while (rs.next()) {
+            String test = "";
+            if (!rs.getBoolean("test")) {
+                test = "ne";
+            } else {
+                test = "ano";
+            }
     %>
     <tr>
         <td><%=rs.getString("id") %>
@@ -52,7 +58,7 @@
         </td>
         <td><%=rs.getString("category") %>
         </td>
-        <td><%=rs.getString("test") %>
+        <td><%=test%>
         </td>
     </tr>
     <%}%>

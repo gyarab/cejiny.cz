@@ -4,6 +4,8 @@ table.paleBlueRows {
     background-color: #EEEEEE;
     text-align: center;
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table.paleBlueRows td, table.paleBlueRows th {
