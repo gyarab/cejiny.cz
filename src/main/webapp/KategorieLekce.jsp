@@ -24,10 +24,6 @@
     </div>
     <br>
     <div class="w3-container">
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-black w3-hover-red">Pověry o počátcích</a>
-    </div>
-    <br>
-    <div class="w3-container">
         <a href="${pageContext.request.contextPath}/kategorie/starovek.jsp"
            class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Starověk</a>
     </div>
