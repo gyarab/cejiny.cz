@@ -19,25 +19,40 @@
 </div>
 <div class="w3-container">
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Pověry o počátcích</p>
+        <a href="${pageContext.request.contextPath}/kategorie/pravek.jsp"
+           class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Pravěk</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Starověk</p>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-black w3-hover-red">Pověry o počátcích</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Středověk</p>
+        <a href="${pageContext.request.contextPath}/kategorie/starovek.jsp"
+           class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Starověk</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Novověk</p>
+        <a href="${pageContext.request.contextPath}/kategorie/stredovek.jsp"
+           class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Středověk</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">1. sv. válka</p>
+        <a href="${pageContext.request.contextPath}/kategorie/novovek.jsp"
+           class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Novověk</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">První republika</p>
+        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">1. sv. válka</a>
     </div>
+    <br>
     <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Události těsně před vypuknutím 2.sv. války</p>
+        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">První republika</a>
+    </div>
+    <br>
+    <div class="w3-container">
+        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Události těsně před vypuknutím 2.sv.
+            války</a>
     </div>
 </div>
 </body>
