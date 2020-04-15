@@ -38,7 +38,7 @@
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
             %>
-            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>,9)">
+            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>,0)">
 
                 <%=lName %>
             </li>
