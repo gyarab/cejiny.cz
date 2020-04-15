@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="java.sql.*" %>
 <html>
 <head>
     <title>Výběr lekce</title>
-    <%@page import="java.sql.*" %>
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <script type="text/javascript" src="../js/addTest.js"></script>
@@ -20,11 +19,14 @@
     </style>
 
 <body>
-<h1 style="text-align: center">Výpis lekcí bez přidaného testu</h1>
+<div id="starting">
+    <h1 style="text-align: center">Výpis lekcí bez přidaného testu</h1>
+</div>
+
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+       // Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE test = false;");
 %>
@@ -36,7 +38,7 @@
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
             %>
-            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>)">
+            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>,9)">
 
                 <%=lName %>
             </li>
