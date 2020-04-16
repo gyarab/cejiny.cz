@@ -39,17 +39,10 @@
     </div>
     <br>
     <div class="w3-container">
-        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">1. sv. válka</a>
+        <a href="${pageContext.request.contextPath}/kategorie/ceskoslovensko.jsp"
+           class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Československo</a>
     </div>
     <br>
-    <div class="w3-container">
-        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">První republika</a>
-    </div>
-    <br>
-    <div class="w3-container">
-        <a href="#" class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red">Události těsně před vypuknutím 2.sv.
-            války</a>
-    </div>
 </div>
 </body>
 </html>
