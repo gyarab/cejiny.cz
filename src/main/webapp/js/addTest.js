@@ -56,10 +56,7 @@ function loadTestInput(lekceName,lekceId,numero){
     }else{
         document.getElementById("setup").innerHTML =
             '<form target="_blank" action="saveQuestion.jsp" onsubmit="allowNext()"  method="post" class="w3-container" id="inputMain" >\n' +
-            ' <select class="w3-select" id="zvolenaLekce" name="zvolenaLekce" >' +
-            '<option value="'+ lekceId + '" selected>' + lekceName + '</option>\n</select>\n' +
-            ' <select class="w3-select" id="zvolenaOtazka" name="zvolenaOtazka" >' +
-            '<option value="'+ numero + '" selected>' + numero + '</option>\n</select>\n' +
+            '<h2>' + lekceName + '</h2>' +
             '<h1>Otázka ' + numero + '/10</h1>\n' +
             '<select class="w3-select" name="option" id="option" onchange="addingForm()">\n' +
             '        <option value="" disabled selected>Vyberte druh otázky</option>\n' +
@@ -71,7 +68,10 @@ function loadTestInput(lekceName,lekceId,numero){
             '<div id="content" class="w3-container w3-mobile">' +
             '</div>\n' +
             '<button id="sendIt" name="sendIt" class="w3-button w3-black" type="submit"  value="' + numero +
-            '" disabled> Uložit otázku</button>\n' + '</form>\n' + '<button class="w3-button w3-black"' +
+            '" disabled> Uložit otázku</button>\n' +
+            '<input type="hidden" id="zvolenaLekce" name="zvolenaLekce" value="' + lekceId + '" />' +
+            '<input type="hidden" id="zvolenaOtazka" name="zvolenaOtazka" value="' + numero + '" />' +
+            '</form>\n' + '<button class="w3-button w3-black"' +
             ' id="nextQuestion" onclick="loadTestInput(\''+ lekceName + '\',' + lekceId + ',' + numero +
             ')" disabled>Přejít na další otázku</button>'
     }

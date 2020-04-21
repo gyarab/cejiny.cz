@@ -26,7 +26,7 @@
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-       // Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        // Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE test = false;");
 %>
@@ -37,10 +37,15 @@
                 while (rs.next()) {
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
+                    Statement st2 = conn.createStatement();
+                    ResultSet rs2 = st2.executeQuery("SELECT COUNT (*) FROM otazky WHERE id_lekce = " + idc + ";");
+                    rs2.next();
+                    int num = rs2.getInt(1);
+                    st2.close();
             %>
-            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>,0)">
+            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>, <%=num %>)">
 
-                <%=lName %>
+                <%=lName %>, <%= num%>/10 otázek hotovo
             </li>
             <%}%>
         </ul>
