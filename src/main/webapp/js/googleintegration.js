@@ -1,5 +1,6 @@
 function onSuccess(googleUser) {
     var profile = googleUser.getBasicProfile();
+    var id_token = profile.getId();
     //console.log('ID: ' + profile.getId());
     //console.log('Name: ' + profile.getName());
     //console.log('Email: ' + profile.getEmail());
@@ -8,6 +9,7 @@ function onSuccess(googleUser) {
     document.getElementById("setUserProfileName").innerHTML = profile.getName()
     document.getElementById("userHide").style.visibility = "visible";
     document.getElementById("testyHide").style.visibility = "visible";
+    document.getElementById("idtoken").innerHTML = id_token
 }
 
 function onFailure(error) {
