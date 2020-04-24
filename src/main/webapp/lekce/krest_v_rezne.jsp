@@ -48,7 +48,10 @@
             13. ledna). Při nedostatku kněží byla pro výjimečné situace vyhrazena pro křty ještě neděle. 13. ledna 845
             ale vychází na úterý. Pro výjimečně nekanonický termín křtu. Možná proto použil autor zápisu neobvyklé denní
             datum.</p>
-<p>Tato událost ale mohla také být reakcí České šlechty na již zmíněné tažení Ludvíka Německého do Polabí. Mohla se tedy tímto česká šlechta pokoušet odvrátit možný vpád do Čech. Avšak to by nevysvětlovalo to zvláštní datum, určitě by s tím mohli počkat do nedalekých velikonoc. To už se ale nejspíš nikdy nedozvíme.</p>
+        <p>Tato událost ale mohla také být reakcí České šlechty na již zmíněné tažení Ludvíka Německého do Polabí. Mohla
+            se tedy tímto česká šlechta pokoušet odvrátit možný vpád do Čech. Avšak to by nevysvětlovalo to zvláštní
+            datum, určitě by s tím mohli počkat do nedalekých velikonoc. To už se ale nejspíš nikdy nedozvíme.</p>
+    </div>
 </div>
-</div></body>
+</body>
 </html>
