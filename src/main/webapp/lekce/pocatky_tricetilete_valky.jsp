@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <title>Počátky Třicetileté války</title>
+    <title>Počátky třicetileté války</title>
     <jsp:include page="../menu.jsp"/>
 </head>
 <body>
 <div class="w3-container w3-mobile">
-    <div class="w3-left-align"><h2><span style="color: #3598db;">Počátek Třicetileté války</span></h2>
+    <div class="w3-left-align"><h2><span style="color: #3598db;">Počátek třicetileté války</span></h2>
         <p>Třicetiletá válka začíná v Praze, kde protestanští stavové defenestrovali 23. května 1618 2 královské
             místodržící a jejich sekretáře z oken Pražského hradu. Tento akt provedli jako akt odporu proti novému
             císaři Matyášovi, který se snažil upevnit slabé postavení katolické církve. Tím ale porušoval Rudolfův
             majestát vydaný jeho bratrem Rudolfem II</p>
-        <p>Tím začíná 1. fáze Třicetileté války, válka česko-falcká. Vzápětí po defenestraci je sestaveno direktorium
+        <p>Tím začíná 1. fáze třicetileté války, válka česko-falcká. Vzápětí po defenestraci je sestaveno direktorium
             vedené Václavem Vilémem z Roupova. Do čela vojsk je postaven Jindřich Matyáš Thurn. Direktorium pak vysílá
             žádost do Evropy a zbylých zemí Habsburské monarchie. Odmítavě se vyjádřili moravští stavové, kladně se však
             vyjádřili stavové ze Slezska, Dolní Lužice a Horních a Dolních Rakous.</p>
