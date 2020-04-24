@@ -6,28 +6,28 @@ function addingForm(){
     if (sele.value==="1"){
         document.getElementById('content').innerHTML =
             '<input type="text" name="otazka" value="" placeholder="Zadejte znění otázky" />\n' +
-            '    <input  type="text" name="odpoved0" value="" placeholder="možnost 1"/>\n' +
-            '     <input type="text" name="odpoved1" value="" placeholder="možnost 2"/>\n' +
-            '      <input type="text" name="odpoved2" value="" placeholder="možnost 3"/>\n' +
-            '       <input type="text" name="odpoved3" value="" placeholder="možnost 4"/>\n' +
+            '    <input  type="text" name="odpoved0" value="" placeholder="možnost a"/>\n' +
+            '     <input type="text" name="odpoved1" value="" placeholder="možnost b"/>\n' +
+            '      <input type="text" name="odpoved2" value="" placeholder="možnost c"/>\n' +
+            '       <input type="text" name="odpoved3" value="" placeholder="možnost d"/>\n' +
             '        <input type="text" name="Sodpoved1" value="" placeholder="Správná odpověď například: b"/>'
 }else if(sele.value==="2"){
         document.getElementById('content').innerHTML =
             ' <input type="text" name="otazka" value="" placeholder="Zadejte znění otázky" />\n' +
-            '    <input type="text" name="odpoved0" value="" placeholder="možnost 1"/>\n' +
-            '     <input type="text" name="odpoved1" value="" placeholder="možnost 2"/>\n' +
-            '      <input type="text" name="odpoved2" value="" placeholder="možnost 3"/>\n' +
-            '       <input type="text" name="odpoved3" value="" placeholder="možnost 4"/>\n' +
+            '    <input type="text" name="odpoved0" value="" placeholder="možnost a"/>\n' +
+            '     <input type="text" name="odpoved1" value="" placeholder="možnost b"/>\n' +
+            '      <input type="text" name="odpoved2" value="" placeholder="možnost c"/>\n' +
+            '       <input type="text" name="odpoved3" value="" placeholder="možnost d"/>\n' +
             '        <input type="text" name="Sodpoved1" value="" placeholder="Správná odpověď například: b,c"/>'
 
 }
 else if(sele.value==="3"){
         document.getElementById('content').innerHTML =
             '<input type="text" name="otazka" value="" placeholder="Zadejte znění otázky" />\n' +
-            '    <input type="text" name="odpoved0" value="" placeholder="1. událost"/>\n' +
-            '     <input type="text" name="odpoved1" value="" placeholder="2. událost"/>\n' +
-            '      <input type="text" name="odpoved2" value="" placeholder="3. událost"/>\n' +
-            '       <input type="text" name="odpoved3" value="" placeholder="4.událost"/>\n' +
+            '    <input type="text" name="odpoved0" value="" placeholder="1. událost a"/>\n' +
+            '     <input type="text" name="odpoved1" value="" placeholder="2. událost b"/>\n' +
+            '      <input type="text" name="odpoved2" value="" placeholder="3. událost c"/>\n' +
+            '       <input type="text" name="odpoved3" value="" placeholder="4.událost d"/>\n' +
             '        <input type="text" name="Sodpoved1" value="" placeholder="Správná odpověď například po sobě: b,c,a,d"/>'
 }
 else if(sele.value==="4"){

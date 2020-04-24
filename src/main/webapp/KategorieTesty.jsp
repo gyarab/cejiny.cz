@@ -17,28 +17,16 @@
 <div class="w3-panel w3-margin-left">
     <h3><u>Kategorie dle období</u></h3>
 </div>
-<div class="w3-container">
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Pověry o počátcích</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Starověk</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Středověk</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Novověk</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">1. sv. válka</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">První republika</p>
-    </div>
-    <div class="w3-container">
-        <p href="#" class="w3-bar-item w3-button w3-mobile w3-hover-red">Události těsně před vypuknutím 2.sv. války</p>
-    </div>
+<div class="w3-container w3-mobile w3-margin-left">
+    <form action="testy/FiltrTesty.jsp" method="post" class="w3-container" id="categoriesT"><br><br>
+        <input id='pravek' type='submit' name='action' class="w3-button w3-black" value="Pravěk"/><br><br>
+        <input id='starovek' type='submit' name='action' class="w3-button w3-black" value='Starověk'/><br><br>
+        <input id='stredovek' type='submit' name='action' class="w3-button w3-black" value='Středověk'/><br><br>
+        <input id='novovek' type='submit' name='action' class="w3-button w3-black" value='Novověk'/><br><br>
+        <input id='ceskoslovensko' type='submit' name='action' class="w3-button w3-black"
+               value='Československo'/><br><br>
+
+    </form>
 </div>
 </body>
 </html>
