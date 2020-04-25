@@ -23,9 +23,6 @@
     <title>Test <%=name%>
     </title>
     <jsp:include page="../menu.jsp"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
-    <script type="text/javascript" src="../js/googleintegration.js"></script>
     <style>
         th {
             text-align: left;

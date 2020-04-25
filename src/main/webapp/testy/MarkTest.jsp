@@ -4,8 +4,6 @@
 <head>
     <title>Výsledky testu</title>
     <jsp:include page="../menu.jsp"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 </head>
 
 <body>
@@ -41,85 +39,101 @@
                 if (catO == 1) {
                     reseni = reseni.replace(",", "");
                     String odpoved = request.getParameter("moznost" + p);
-                    if (odpoved.equals(reseni)) {
-                        counter++;
-                        spravnost = true;
+                    if (odpoved != null) {
+                        if (odpoved.equals(reseni)) {
+                            counter++;
+                            spravnost = true;
 
+                        }
                     }
+
 
                 } else if (catO == 2) {
                     String[] temp = reseni.split(",");
                     String[] odpoved = request.getParameterValues("moznost" + p);
-                    int count = 0;
-                    for (String a : odpoved) {
-                        for (String b : temp) {
-                            if (a.equals(b)) {
-                                count++;
-                                break;
+                    if (odpoved != null) {
+                        int count = 0;
+                        for (String a : odpoved) {
+                            for (String b : temp) {
+                                if (a.equals(b)) {
+                                    count++;
+                                    break;
+                                }
                             }
                         }
+                        if (count == odpoved.length) {
+                            counter++;
+                            spravnost = true;
+                        }
                     }
-                    if (count == odpoved.length) {
-                        counter++;
-                        spravnost = true;
-                    }
+
                 } else if (catO == 3) {
-                    int m1 = Integer.valueOf(request.getParameter("moznost" + p));
-                    p++;
-                    int m2 = Integer.valueOf(request.getParameter("moznost" + p));
-                    p++;
-                    int m3 = Integer.valueOf(request.getParameter("moznost" + p));
-                    p++;
-                    int m4 = Integer.valueOf(request.getParameter("moznost" + p));
-                    String[] odpoved = new String[4];
-                    odpoved[m1] = "a";
-                    odpoved[m2] = "b";
-                    odpoved[m3] = "c";
-                    odpoved[m4] = "d";
-                    String[] temp = reseni.split(",");
-                    int count = 0;
-                    for (int j = 0; j < 4; j++) {
-                        if (temp[j].equals(odpoved[j])) {
-                            count++;
-                        }
-                        if (count == j) {
-                            break;
-                        }
-                    }
-                    if (count == 4) {
-                        counter++;
-                        spravnost = true;
-                    }
-                } else {
-                    String m1 = request.getParameter("moznost" + p);
-                    p++;
-                    String m2 = request.getParameter("moznost" + p);
-                    p++;
-                    String m3 = request.getParameter("moznost" + p);
-                    p++;
-                    String m4 = request.getParameter("moznost" + p);
-                    reseni = reseni.replace("-", "-");
-                    String[] temp = reseni.split(",");
-                    String[] odpoved = new String[4];
-                    odpoved[0] = "1-" + m1;
-                    odpoved[1] = "2-" + m2;
-                    odpoved[2] = "3-" + m3;
-                    odpoved[3] = "4-" + m4;
-                    int count = 0;
-                    for (int j = 0; j < 4; j++) {
-                        for (int k = 0; k < 4; k++) {
-                            if (odpoved[j].equals(temp[k])) {
+                    int x = p + 1;
+                    int y = p + 2;
+                    int z = p + 3;
+
+                    if (request.getParameter("moznost" + p) != null && request.getParameter("moznost" + x) != null &&
+                            request.getParameter("moznost" + y) != null && request.getParameter("moznost" + z) != null) {
+                        int m1 = Integer.valueOf(request.getParameter("moznost" + p));
+                        int m2 = Integer.valueOf(request.getParameter("moznost" + x));
+                        int m3 = Integer.valueOf(request.getParameter("moznost" + y));
+                        int m4 = Integer.valueOf(request.getParameter("moznost" + z));
+                        String[] odpoved = new String[4];
+                        odpoved[m1] = "a";
+                        odpoved[m2] = "b";
+                        odpoved[m3] = "c";
+                        odpoved[m4] = "d";
+                        String[] temp = reseni.split(",");
+                        int count = 0;
+                        for (int j = 0; j < 4; j++) {
+                            if (temp[j].equals(odpoved[j])) {
                                 count++;
+                            }
+                            if (count == j) {
                                 break;
                             }
                         }
-                        if (count == j) {
-                            break;
+                        if (count == 4) {
+                            counter++;
+                            spravnost = true;
                         }
                     }
-                    if (count == 4) {
-                        counter++;
-                        spravnost = true;
+
+
+                } else {
+                    int x = p + 1;
+                    int y = p + 2;
+                    int z = p + 3;
+                    if (request.getParameter("moznost" + p) != null && request.getParameter("moznost" + x) != null &&
+                            request.getParameter("moznost" + y) != null && request.getParameter("moznost" + z) != null) {
+
+                        String m1 = request.getParameter("moznost" + p);
+                        String m2 = request.getParameter("moznost" + x);
+                        String m3 = request.getParameter("moznost" + y);
+                        String m4 = request.getParameter("moznost" + z);
+                        reseni = reseni.replace("-", "-");
+                        String[] temp = reseni.split(",");
+                        String[] odpoved = new String[4];
+                        odpoved[0] = "1-" + m1;
+                        odpoved[1] = "2-" + m2;
+                        odpoved[2] = "3-" + m3;
+                        odpoved[3] = "4-" + m4;
+                        int count = 0;
+                        for (int j = 0; j < 4; j++) {
+                            for (int k = 0; k < 4; k++) {
+                                if (odpoved[j].equals(temp[k])) {
+                                    count++;
+                                    break;
+                                }
+                            }
+                            if (count == j) {
+                                break;
+                            }
+                        }
+                        if (count == 4) {
+                            counter++;
+                            spravnost = true;
+                        }
                     }
 
                 }

@@ -22,6 +22,16 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<style>
+    #submitter {
+        background-color: #FFFFFF;
+        border: none;
+        color: black;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        cursor: pointer;
+    }
+</style>
 
 <body>
 <div class="w3-container w3-left" style="margin-top: 10px">
@@ -47,8 +57,12 @@
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
                 <a href="${pageContext.request.contextPath}/KategorieTesty.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
-                <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile">Seznam
-                    všech testů</a>
+                <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile">
+                    <form action="SeznamTestu.jsp" method="post">
+                        <input type="hidden" id="idtoken2" name="userID" value=""/>
+                        <input type='submit' id="submitter" name='test' value="Seznam všech Testů"/>
+                    </form>
+                </a>
             </div>
         </div>
 

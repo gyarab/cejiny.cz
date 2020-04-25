@@ -4,9 +4,6 @@
 <head>
     <title>Seznam testů</title>
     <jsp:include page="../menu.jsp"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
-    <script type="text/javascript" src="../js/googleintegration.js"></script>
 </head>
 <%
     try {
@@ -14,8 +11,11 @@
         //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         request.setCharacterEncoding("UTF-8");
         String cat = request.getParameter("action");
+        String usI = request.getParameter("userID");
         Statement st = conn.createStatement();
+        Statement st2 = conn.createStatement();
         ResultSet rs;
+        ResultSet rs2;
 
         /*
         Switch-case nelze použit z důvodu starší verze Javy běžící v jsp - bez možnosti porovnání stringu
@@ -43,10 +43,16 @@
         while (rs.next()) {
             String lName = rs.getString("name");
             int idc = rs.getInt("id");
+            rs2 = st2.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "' AND lekceid =" + idc + ";");
+            int n = 0;
+            if (rs2.next()) {
+                n = rs2.getInt("result");
+            }
 
     %>
     <form action="LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/><br>
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/> Vaše nejvyšší
+        hodnocení: <%=n%>%<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
 

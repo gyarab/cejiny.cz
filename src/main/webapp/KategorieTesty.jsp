@@ -19,6 +19,7 @@
 </div>
 <div class="w3-container w3-mobile w3-margin-left">
     <form action="testy/FiltrTesty.jsp" method="post" class="w3-container" id="categoriesT"><br><br>
+        <input type="hidden" id="idtoken" name="userID" value=""/>
         <input id='pravek' type='submit' name='action' class="w3-button w3-black" value="Pravěk"/><br><br>
         <input id='starovek' type='submit' name='action' class="w3-button w3-black" value='Starověk'/><br><br>
         <input id='stredovek' type='submit' name='action' class="w3-button w3-black" value='Středověk'/><br><br>

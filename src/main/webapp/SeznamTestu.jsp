@@ -4,15 +4,15 @@
 <head>
     <title>Seznam všech testů</title>
     <jsp:include page="menu.jsp"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
-
 </head>
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        // Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        String usI = request.getParameter("userID");
         Statement st = conn.createStatement();
+        Statement st2 = conn.createStatement();
+        ResultSet rs2;
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE  test = true;");
 %>
 <body>
@@ -23,10 +23,16 @@
         while (rs.next()) {
             String lName = rs.getString("name");
             int idc = rs.getInt("id");
+            rs2 = st2.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "' AND lekceid =" + idc + ";");
+            int n = 0;
+            if (rs2.next()) {
+                n = rs2.getInt("result");
+            }
 
     %>
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/><br>
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Vaše nejvyšší
+        hodnocení: <%=n%>%<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
 
