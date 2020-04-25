@@ -10,8 +10,8 @@
 </head>
 <%
     try {
-        // Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         request.setCharacterEncoding("UTF-8");
         String cat = request.getParameter("action");
         Statement st = conn.createStatement();

@@ -10,8 +10,8 @@
 </head>
 <%
     try {
-        // Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE  test = true;");
 %>

@@ -5,8 +5,8 @@
 <html>
 <%
     try {
-        // Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("test");
         String idLekce = request.getParameter("test2");
@@ -37,7 +37,7 @@
 <div class="w3-container w3-mobile w3-margin-left">
     <h1>Test na téma: <%=name%>
     </h1>
-    <form action="LoadTest.jsp" method="post" class="w3-container" id="categoriesT">
+    <form action="MarkTest.jsp" method="post" class="w3-container" id="categoriesT">
         <div id="setUserID">
             <input type="hidden" id="idtoken" name="userID" value=""/>
         </div>
@@ -72,8 +72,8 @@
         <input class="w3-radio" type="radio" name="moznost<%=p%>" value="d">
         <label>d) <%=moznost3%>
         </label><br>
-        <input type="hidden" id="idO<%=i%>" name="userID" value="<%=idT%>"/>
-        <input type="hidden" id="catO<%=i%>" name="userID" value="<%=cat%>"/>
+        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
+        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
 
 
         <%
@@ -94,8 +94,8 @@
         <input class="w3-check" type="checkbox" value="d" name="moznost<%=p%>">
         <label>d) <%=moznost3%>
         </label><br>
-        <input type="hidden" id="idO<%=i%>" name="userID" value="<%=idT%>"/>
-        <input type="hidden" id="catO<%=i%>" name="userID" value="<%=cat%>"/>
+        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
+        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
         <%
         } else if (cat == 3) {
 
@@ -107,40 +107,40 @@
         </label>
         <select class="w3-select" name="moznost<%=p%>" style="width: 200px">
             <option value="" selected disabled>Vyberte pořadí</option>
-            <option value="1">1. v pořadí</option>
-            <option value="2">2. v pořadí</option>
-            <option value="3">3. v pořadí</option>
-            <option value="4">4. v pořadí</option>
+            <option value="0">1. v pořadí</option>
+            <option value="1">2. v pořadí</option>
+            <option value="2">3. v pořadí</option>
+            <option value="3">4. v pořadí</option>
         </select><br>
         <label><%=moznost1%>
         </label>
         <select class="w3-select" name="moznost<%=p+1%>" style="width: 200px">
             <option value="" selected disabled>Vyberte pořadí</option>
-            <option value="1">1. v pořadí</option>
-            <option value="2">2. v pořadí</option>
-            <option value="3">3. v pořadí</option>
-            <option value="4">4. v pořadí</option>
+            <option value="0">1. v pořadí</option>
+            <option value="1">2. v pořadí</option>
+            <option value="2">3. v pořadí</option>
+            <option value="3">4. v pořadí</option>
         </select><br>
         <label><%=moznost2%>
         </label>
         <select class="w3-select" name="moznost<%=p+2%>" style="width: 200px">
             <option value="" selected disabled>Vyberte pořadí</option>
-            <option value="1">1. v pořadí</option>
-            <option value="2">2. v pořadí</option>
-            <option value="3">3. v pořadí</option>
-            <option value="4">4. v pořadí</option>
+            <option value="0">1. v pořadí</option>
+            <option value="1">2. v pořadí</option>
+            <option value="2">3. v pořadí</option>
+            <option value="3">4. v pořadí</option>
         </select><br>
         <label><%=moznost3%>
         </label>
         <select class="w3-select" name="moznost<%=p+3%>" style="width:200px ">
             <option value="" selected disabled>Vyberte pořadí</option>
-            <option value="1">1. v pořadí</option>
-            <option value="2">2. v pořadí</option>
-            <option value="3">3. v pořadí</option>
-            <option value="4">4. v pořadí</option>
+            <option value="0">1. v pořadí</option>
+            <option value="1">2. v pořadí</option>
+            <option value="2">3. v pořadí</option>
+            <option value="3">4. v pořadí</option>
         </select><br>
-        <input type="hidden" id="idO<%=i%>" name="userID" value="<%=idT%>"/>
-        <input type="hidden" id="catO<%=i%>" name="userID" value="<%=cat%>"/>
+        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
+        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
 
 
         <%
@@ -208,8 +208,8 @@
 
 
         </table>
-        <input type="hidden" id="idO<%=i%>" name="userID" value="<%=idT%>"/>
-        <input type="hidden" id="catO<%=i%>" name="userID" value="<%=cat%>"/>
+        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
+        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
 
         <%}%>
 
