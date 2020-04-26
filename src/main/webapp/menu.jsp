@@ -52,7 +52,6 @@
                 <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile"
                    style="height:40px;width:250px">
                     <!-- V odkazu je vložen dokument, který slouží pro přenos id uživatele do následujícího souboru jsp. -->
-                    <form action="SeznamTestu.jsp" method="post">
                     <form action="${pageContext.request.contextPath}/SeznamTestu.jsp" method="post">
                         <input style="margin-top: -10px;margin-left: -15px" class="w3-bar-item w3-button" type='submit'
                                name='test' value="Seznam všech Testů"/>
