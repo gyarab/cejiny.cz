@@ -53,6 +53,7 @@
                    style="height:40px;width:250px">
                     <!-- V odkazu je vložen dokument, který slouží pro přenos id uživatele do následujícího souboru jsp. -->
                     <form action="SeznamTestu.jsp" method="post">
+                    <form action="${pageContext.request.contextPath}/SeznamTestu.jsp" method="post">
                         <input style="margin-top: -10px;margin-left: -15px" class="w3-bar-item w3-button" type='submit'
                                name='test' value="Seznam všech Testů"/>
                         <input type="hidden" id="idtoken2" name="userID" value=""/>
@@ -71,7 +72,8 @@
             </button>
             <div class="w3-dropdown-content w3-bar-block w3-border" style="">
                 <a style="text-decoration: none" href="#" id="my-signin2"></a>
-                <a class="w3-bar-item w3-button w3-mobile" id="signout" href="#" onclick="signOut();">Odhlásit se</a>
+                <a style="margin-top: -50px;" class="w3-bar-item w3-button w3-mobile" id="signout" href="#"
+                   onclick="signOut();">Odhlásit se</a>
                 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
             </div>
         </div>
