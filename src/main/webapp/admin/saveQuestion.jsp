@@ -14,12 +14,16 @@
 
 
 </head>
+<!-- Tato stránka se otevře v nové záložce při ukládání otázky do databáze. Poté se zase ihned zavře.-->
 <body>
 <div class="w3-container w3-mobile w3-left-align">
     <h1>Právě probíhá ukládání otázky, vydržte prosím </h1>
 </div>
 </body>
 <%
+    /*
+    Zde dojde k načtení všech dat o vytvořené otázce a jejich přetypování pro databázi.
+     */
     request.setCharacterEncoding("UTF-8");
     String typOtazkyS =  request.getParameter("option");
     Integer typOtazky = Integer.valueOf(typOtazkyS);
@@ -38,7 +42,9 @@
     String moznost6 = null;
     String moznost7 = null;
 
-
+/*
+Pokud se jedná o otázku typu přiřazovací, načtou se i data z dalších potřebných polí.
+ */
     if(typOtazky==4){
          moznost4 = request.getParameter("odpoved4");
          moznost5 = request.getParameter("odpoved5");
@@ -46,6 +52,10 @@
          moznost7 = request.getParameter("odpoved7");
     }
     try {
+        /*
+        Poté proběhne zápis nového zaáznamu do databáze a pokud se jedná o 10. otázku změní se hodnota pro lekci, kdy
+         nadále pro ní není možné vytvářet otázky, ale je od tohoto momentu viditelná pro normálního přihlášeného uživatele.
+         */
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
         //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         Statement st = conn.createStatement();
@@ -65,11 +75,5 @@
     }
 
 
-
-
-
-
 %>
-
-
 </html>

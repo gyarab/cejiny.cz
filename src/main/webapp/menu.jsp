@@ -30,8 +30,10 @@
 </div>
 
 <section class="w3-container">
+    <!-- Hlavní menu pro uživatelské stránky, je součásté všech stránek dostupných pro uživatele,
+    slouží pro rychlou orientaci a pohyb na našich stránkách. -->
     <div class="w3-bar w3-black w3-center">
-
+        <!-- Založka v menu pro volbu lekcí-->
         <div class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-mobile">
             <button class="w3-button w3-hover-red"><i class="fas fa-book fa-lg"></i> Lekce
             </button>
@@ -41,7 +43,7 @@
                     všech lekcí</a>
             </div>
         </div>
-
+        <!-- Záložka v menu pro volbu testů, dokud není uživatel přihlášen není k dispozici. -->
         <div id="testyHide" class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-mobile">
             <button class="w3-button w3-hover-red"><i class="fas fa-brain fa-lg"></i> Testy
             </button>
@@ -49,6 +51,7 @@
                 <a href="${pageContext.request.contextPath}/KategorieTesty.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
                 <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile"
                    style="height:40px;width:250px">
+                    <!-- V odkazu je vložen dokument, který slouží pro přenos id uživatele do následujícího souboru jsp. -->
                     <form action="SeznamTestu.jsp" method="post">
                         <input style="margin-top: -10px;margin-left: -15px" class="w3-bar-item w3-button" type='submit'
                                name='test' value="Seznam všech Testů"/>
@@ -57,7 +60,7 @@
                 </a>
             </div>
         </div>
-
+        <!-- Tato záložka slouží pro přihlášení a pozdejší odhlášení uživatelského Google account.-->
         <div class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-right w3-mobile" style="visibility: hidden">
             <button class="w3-button w3-hover-red"><i class="far fa-user fa-lg"></i> Účet
             </button>

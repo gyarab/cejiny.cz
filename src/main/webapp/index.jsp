@@ -13,6 +13,7 @@
   <jsp:include page="menu.jsp"/>
 </head>
 <body>
+<!-- Toto je úvodní stránka našeho projektu. -->
 <div class="w3-container w3-mobile">
   <div class="w3-left-align">
     <p>Vítejte na stránkách Čejiny.cz</p>

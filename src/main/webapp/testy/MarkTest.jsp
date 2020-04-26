@@ -5,6 +5,7 @@
     <title>Výsledky testu</title>
     <jsp:include page="../menu.jsp"/>
 </head>
+<!-- Tato stránka slouží pro vyhodnocení odevzdaného testu.-->
 
 <body>
 <div class="w3-container w3-mobile w3-margin-left">
@@ -15,6 +16,11 @@
             Statement st = conn.createStatement();
             ResultSet rs = null;
             request.setCharacterEncoding("UTF-8");
+            /*
+            Proměnná counter zaznamenává počet správných odpovědí. Boolean chyby ukládá zda byla již vygenerována
+             hlavička pro špatné odpovědi. Proměná idL je pak id lekce která se potřebuje při první kontrole odpovědi načíst z databáze.
+             Pokud uživatel nevyplní některou z otázek neprobíhá její kontrola s řešením ale program přechází k další odpovědi.
+             */
             int counter = 0;
             boolean chyby = false;
             int idL = -1;
@@ -30,6 +36,9 @@
                     rs.next();
                     idL = rs.getInt("id_lekce");
                 }
+                /*
+                Před rozdělením podle typu otázky se načte správné řešení a základně se upraví.
+                 */
                 rs = st.executeQuery("SELECT * FROM otazky WHERE id =" + idO + ";");
                 rs.next();
                 String reseni = rs.getString("odpoved");
@@ -37,6 +46,9 @@
                 reseni = reseni.replace(";", ",");
                 boolean spravnost = false;
                 if (catO == 1) {
+                    /*
+                    Pokud se jedná o otázku s jednou správnou odpovědí stačí pouze odpověď porovnat s rešením.
+                     */
                     reseni = reseni.replace(",", "");
                     String odpoved = request.getParameter("moznost" + p);
                     if (odpoved != null) {
@@ -49,6 +61,10 @@
 
 
                 } else if (catO == 2) {
+                    /*
+                    Pokud se jedná o otázku s více správnými odpověďmi rozdělí se řešení do pole a pak se pomocí for
+                    each loopu porovnává zda se odpověď nachází v řešení. Pokud se objeví jedna chyba tak kontrola dále nepokračuje a bod uživateli není přičten.
+                     */
                     String[] temp = reseni.split(",");
                     String[] odpoved = request.getParameterValues("moznost" + p);
                     if (odpoved != null) {
@@ -68,6 +84,10 @@
                     }
 
                 } else if (catO == 3) {
+                    /*
+                    Pokud se jedná o časovou osu, jsou odpovědi seřazeny do pole a to porovnáno s hodnotami v řešení.
+                    Jakmile nastane jedna chyba, kontrola dále nepokračuje.
+                     */
                     int x = p + 1;
                     int y = p + 2;
                     int z = p + 3;
@@ -101,6 +121,10 @@
 
 
                 } else {
+                    /*
+                   Pokud se jedná o zbylou kategorii přiřazování jsou hodnoty odpovědi přidány do připraveného pole a to
+                    je porovnáno každé s každým v poli s řešením. Pokud nastane chyba kontrola končí bez přidání jakéhokoliv bodu.
+                     */
                     int x = p + 1;
                     int y = p + 2;
                     int z = p + 3;
@@ -146,6 +170,9 @@
 
         }
         String otazka = rs.getString("otazka");
+                    /*
+                    Pokud byla otázka zodpovězena chybně, vypíše se její znění v seznamu špatných odpovědí.
+                     */
     %>
     <h3><%=i + 1%>)<%=otazka%>
     </h3><br>
@@ -154,6 +181,10 @@
 
 
         }
+            /*
+            Zde se vypočítá výsledek a vypíše se uživateli. Krom toho se také zapíše do databáze, buď jako nový záznam
+             nebo pokud již existuje předchozí pokus a jeho výsledek je horší je tento záznam přepsán.
+             */
         int vysledek = 100 * counter / 5;
         String usI = request.getParameter("userID");
         rs = st.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "';");

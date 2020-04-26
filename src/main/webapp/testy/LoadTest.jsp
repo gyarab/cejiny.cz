@@ -3,6 +3,7 @@
 <%@ page import="java.util.Collections" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<!-- Na této stránce probíhá načítání uživatelem zvoleného testu. -->
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
@@ -13,6 +14,9 @@
         Integer idc = Integer.valueOf(idLekce);
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT id FROM otazky WHERE id_lekce =" + idc + ";");
+        /*
+        Nejdříve se načtou všechny id otázek, které náleží patřičnému tématu a dají se do pole které se následně zamíchá.
+         */
         ArrayList<Integer> randomizer = new ArrayList<Integer>();
         while (rs.next()) {
             randomizer.add(rs.getInt("id"));
@@ -35,17 +39,26 @@
     <h1>Test na téma: <%=name%>
     </h1>
     <form action="MarkTest.jsp" method="post" class="w3-container" id="categoriesT">
+        <!-- Pro uložení výsledku na další straně se k testu přidá id uživatelského Google účtu. -->
         <div id="setUserID">
             <input type="hidden" id="idtoken" name="userID" value=""/>
         </div>
         <br>
 
         <%
+            /*
+            Zde se získá prvních pět otázek z pole po jeho zamíchání a vypíší se na stránku.
+            Proměnné i a p slouží pro generátor unikátních atributů name pro každý vstup na stránce tak aby šly
+            rozlišit při zpracování odpovědi a nikdy se nepřekrývaly.
+             */
             int p;
             for (int i = 0; i < 5; i++) {
                 p = i * 8 + 1;
                 rs = st.executeQuery("SELECT * FROM otazky WHERE id =" + randomizer.get(i) + "; ");
                 rs.next();
+                /*
+                Před rozdělením podle kategorií otázky se získají data shodná pro všechny typy.
+                 */
                 int idT = randomizer.get(i);
                 int cat = rs.getInt("typ");
                 String otazka = rs.getString("otazka");
@@ -53,10 +66,16 @@
                 String moznost1 = rs.getString("moznosti1");
                 String moznost2 = rs.getString("moznosti2");
                 String moznost3 = rs.getString("moznosti3");
-                if (cat == 1) {
         %>
         <h3><%=i + 1%>)<%=otazka%>
         </h3>
+        <%
+            if (cat == 1) {
+                    /*
+                    Kategorie jedna je typem otázky s jednou správnou odpovědí proto se vypíší 4 vstupy typu radio se stejným atributem name.
+                     */
+        %>
+
         <input class="w3-radio" type="radio" name="moznost<%=p%>" value="a">
         <label>a) <%=moznost0%>
         </label><br>
@@ -69,16 +88,16 @@
         <input class="w3-radio" type="radio" name="moznost<%=p%>" value="d">
         <label>d) <%=moznost3%>
         </label><br>
-        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
-        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
-
 
         <%
         } else if (cat == 2) {
+                    /*
+                    Kategorie dva je typem otázky s více správnými odpověďmi proto se odpovědi zobrazí ve skupině
+                    vstupů typu checkbox se stejným atributem name.
+                     */
 
         %>
-        <h3><%=i + 1%>)<%=otazka%>
-        </h3>
+
         <input class="w3-check" type="checkbox" value="a" name="moznost<%=p%>">
         <label>a) <%=moznost0%>
         </label><br>
@@ -91,14 +110,14 @@
         <input class="w3-check" type="checkbox" value="d" name="moznost<%=p%>">
         <label>d) <%=moznost3%>
         </label><br>
-        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
-        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
+
         <%
         } else if (cat == 3) {
+                    /*
+                    Kategorie tři je typem otázky časová osa proto se u každé odpovědi generuje výběr pořadí dané odpovědi.
+                     */
 
         %>
-        <h3><%=i + 1%>)<%=otazka%>
-        </h3>
 
         <label><%=moznost0%>
         </label>
@@ -136,18 +155,19 @@
             <option value="2">3. v pořadí</option>
             <option value="3">4. v pořadí</option>
         </select><br>
-        <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
-        <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
-
 
         <%
         } else {
+                    /*
+                    U zbytku neboli kategorie čtyři neboli přiřazení pojmů se načítají i zbylé 4 možnosti, které jsou
+                     potřeba pro její zodpovězení všsechny data se pak zobrazují v tabulce se sloupci data typu a,
+                      související pojem typu b a data typu b.
+                     */
             String moznost4 = rs.getString("moznosti4");
             String moznost5 = rs.getString("moznosti5");
             String moznost6 = rs.getString("moznosti6");
             String moznost7 = rs.getString("moznosti7");
         %>
-        <h3><%=i + 1%>)<%=otazka%>
         </h3>
         <table>
             <tr>
@@ -202,13 +222,16 @@
                 <th>d) <%=moznost7%>
                 </th>
             </tr>
-
-
         </table>
+
+        <%
+            }
+        /*
+        Poté se na závěr přidají data o typu a id otázky pro pozdější zpracování.
+        */
+        %>
         <input type="hidden" name="idO<%=i%>" value="<%=idT%>"/>
         <input type="hidden" name="catO<%=i%>" value="<%=cat%>"/>
-
-        <%}%>
 
         <%
 
@@ -219,6 +242,7 @@
             }
         %>
         <br><br>
+        <!-- Tímto tlačítkem proběhne odevzdání celého tesu a jeho vyhodnocení na další straně.-->
         <button type="submit" class="w3-button w3-black">Odevzdat test</button>
     </form>
 </div>

@@ -17,6 +17,7 @@
 <div class="w3-panel w3-margin-left">
     <h3><u>Kategorie dle období</u></h3>
 </div>
+<!-- Tato stránka se zobrazí po kliknutí na kategorie testů a slouží pro výber dané kategorie. -->
 <div class="w3-container w3-mobile w3-margin-left">
     <form action="testy/FiltrTesty.jsp" method="post" class="w3-container" id="categoriesT"><br><br>
         <input type="hidden" id="idtoken" name="userID" value=""/>

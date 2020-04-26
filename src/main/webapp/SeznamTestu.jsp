@@ -5,6 +5,7 @@
     <title>Seznam všech testů</title>
     <jsp:include page="menu.jsp"/>
 </head>
+<!-- Na této stránce se vypíší všechny dostupné testy. -->
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
@@ -15,12 +16,19 @@
         ResultSet rs2;
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE  test = true;");
         boolean isTest = false;
+        /*
+        ResultSet rs slouží pro výpis všech dostupných testů.
+        ResultSet rs2 pak pro dohledání informací o předchozích výsledcích daného uživatele.
+         */
 %>
 <body>
 <div class="w3-container w3-mobile w3-margin-left">
 
     <br>
     <%
+        /*
+        Úkolem je vypsat všechny dostupné testy ve formě tlačítka, aby proběhlo přesměrování na samotný test s id daného testu.
+         */
         while (rs.next()) {
             isTest = true;
             String lName = rs.getString("name");
@@ -28,6 +36,9 @@
             rs2 = st2.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "' AND lekceid =" + idc + ";");
             if (rs2.next()) {
                 int n = rs2.getInt("result");
+                /*
+                 Tento kód se zobrazí uživateli u testu, který již odevzdal dříve.
+                */
     %>
 
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
@@ -39,6 +50,9 @@
 
 
     } else {
+                /*
+                Tento kód se zobrazí uživateli u testu, který ještě nikdy neodevzdal.
+                 */
     %>
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
         <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Zatím
@@ -53,6 +67,9 @@
 
         }
         if (!isTest) {
+            /*
+            Pokud by v databázi neexistovala žádná lekce s 10 vytvořenými otázkami zobrazí se tento kód.
+             */
     %>
     <h2> Bohužel zatím není dostupný žádný test k vyplnění</h2>
     <%

@@ -7,6 +7,7 @@
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     <script type="text/javascript" src="../js/addTest.js"></script>
 </head>
+<!-- Na této stránce probíhá výběr testu ke zhotovení a později samotné přidávání otázek. -->
     <style>
            input{
                 width: 100%;
@@ -34,6 +35,9 @@
     <div class="w3-left-align" id="setup">
         <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
             <%
+                /*
+                Zde se vypíše list všech lekcí u kterých není udělaný test včetně počtu již hotových otázek, pokud v minulosti došlo k přerušení.
+                 */
                 while (rs.next()) {
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
@@ -44,7 +48,7 @@
                     st2.close();
             %>
             <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>, <%=num %>)">
-
+                <!-- Při kliknutí se tato stránka přepíše na editor tvorby otázek k danému tématu. -->
                 <%=lName %>, <%= num%>/10 otázek hotovo
             </li>
             <%}%>
