@@ -14,6 +14,7 @@
         Statement st2 = conn.createStatement();
         ResultSet rs2;
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE  test = true;");
+        boolean isTest = false;
 %>
 <body>
 <div class="w3-container w3-mobile w3-margin-left">
@@ -21,22 +22,41 @@
     <br>
     <%
         while (rs.next()) {
+            isTest = true;
             String lName = rs.getString("name");
             int idc = rs.getInt("id");
             rs2 = st2.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "' AND lekceid =" + idc + ";");
-            int n = 0;
             if (rs2.next()) {
-                n = rs2.getInt("result");
-            }
-
+                int n = rs2.getInt("result");
     %>
+
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
         <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Vaše nejvyšší
         hodnocení: <%=n%>%<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
-
     <%
+
+
+    } else {
+    %>
+    <form action="testy/LoadTest.jsp" method="post" class="w3-container">
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Zatím
+        nevyplněný test<br>
+        <input name="test2" type="hidden" value="<%=idc%>"/>
+    </form>
+    <%
+
+
+
+            }
+
+        }
+        if (!isTest) {
+    %>
+    <h2> Bohužel zatím není dostupný žádný test k vyplnění</h2>
+    <%
+
         }
     %>
 

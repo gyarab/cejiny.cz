@@ -9,8 +9,8 @@ function onSuccess(googleUser) {
     document.getElementById("setUserProfileName").innerHTML = profile.getName()
     document.getElementById("userHide").style.visibility = "visible";
     document.getElementById("testyHide").style.visibility = "visible";
-    document.getElementById("idtoken").value = id_token;
     document.getElementById("idtoken2").value = id_token;
+    document.getElementById("idtoken").value = id_token;
 }
 
 function onFailure(error) {
