@@ -49,7 +49,7 @@
                 <a href="${pageContext.request.contextPath}/KategorieTesty.jsp" class="w3-bar-item w3-button w3-mobile">Kategorie</a>
                 <a href="${pageContext.request.contextPath}/SeznamTestu.jsp" class="w3-bar-item w3-button w3-mobile"
                    style="height:40px;width:250px">
-                    <form action="SeznamTestu.jsp" method="post">
+                    <form action="${pageContext.request.contextPath}/SeznamTestu.jsp" method="post">
                         <input style="margin-top: -10px;margin-left: -15px" class="w3-bar-item w3-button" type='submit'
                                name='test' value="Seznam všech Testů"/>
                         <input type="hidden" id="idtoken2" name="userID" value=""/>
