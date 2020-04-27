@@ -1,3 +1,4 @@
+<!-- Import java.sql k práci s databází, java.io k práci se soubory, java.text.Normalizer k vytvoření jména souboru-->
 <%@ page import="java.io.*" %>
 <%@page import="java.sql.*" %>
 <%@ page import="java.text.Normalizer" %>
@@ -20,15 +21,19 @@
 </head>
 <body style="text-align: center">
 <%
+    // ziskani dat z addNewLesson, vytvoreni jmena souboru ze jmena lekce
     request.setCharacterEncoding("UTF-8");
     String lekcename = request.getParameter("lekcename");
     String lowerNormalizedLekcename = lekcename.replaceAll(" ", "_").toLowerCase().replaceAll("[.|,]", "");
     String filename = Normalizer.normalize(lowerNormalizedLekcename, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "") + ".jsp";
+    // nastaveni cesty pro vytvoreni souboru
     String mainPath = "src/main/webapp/lekce/";
+    // ziskani dat z TinyMCE editoru
     String text = request.getParameter("textarea");
     String pathCreate = mainPath + filename;
     String vysledek = "";
     try {
+        // vytvoreni souboru
         File strFile = new File(pathCreate);
         if (strFile.createNewFile()) {
             vysledek = "Nová lekce byla úspěšně vytvořena!";
@@ -51,7 +56,7 @@
             objWriter.write(cast1 + cast2 + lekcename + cast3 + text + "\n" + cast4);
             objWriter.flush();
             objWriter.close();
-            // konec vytvareni souboru, databaze
+            // konec vytvareni souboru, databaze zapis
 
             String category = request.getParameter("category");
             String pathdb = "/lekce/" + filename;
@@ -70,6 +75,7 @@
                 e.printStackTrace();
             }
         } else {
+            // pokud existuje lekce se stejnym nazvem, tak se tento error odchyti a napise chybovou hlasku
             vysledek = "Lekce s tímto názvem již existuje!";
         }
     } catch (IOException e) {
@@ -78,9 +84,11 @@
 
 
 %>
+<!-- Vypiš jestli se povedlo vytvorit lekci-->
 <h1><%=vysledek%>
 </h1>
 <br>
+<!-- Zpět na admin panel-->
 <a href="home.jsp" class="w3-button w3-black" style="text-align: center"><i class="fas fa-tools"></i> Admin Panel</a>
 <!--<a href="" class="w3-button w3-black" style="text-align: center"><i class="far fa-eye"></i> Vytvořená lekce</a>-->
 </body>

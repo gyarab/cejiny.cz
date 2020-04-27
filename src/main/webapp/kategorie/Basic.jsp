@@ -5,6 +5,7 @@
   Time: 21:18
   To change this template use File | Settings | File Templates.
 --%>
+<!-- Tento soubor je jen zaklad pro pripadné dalsi kategorie/ ale ma jiz predpripravene komentare -->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="cz">
 
@@ -18,12 +19,14 @@
 <br>
 <%
     try {
+        // pripoji se k databazi a najde zapis pro zadanou kategorii
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE category= 'pravek';");
 %>
 <div class="w3-container w3-mobile">
     <div class="w3-left-align">
+        <!-- vytvoreni listu dostupnych lekci -->
         <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
             <%
                 while (rs.next()) {
@@ -37,6 +40,7 @@
 </div>
 <br>
 <%
+    // zavrit spojeni mezi souborem a databazi
     st.close();
     conn.close();
 } catch (Exception e) {

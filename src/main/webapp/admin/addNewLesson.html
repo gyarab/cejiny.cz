@@ -18,14 +18,16 @@
     <script type="text/javascript" src="../js/lekceForm.js"></script>
 </head>
 <body>
-
+<!-- Při vytváření nové lekce se odesílá formulář se zadanými údaji do soubrou lekcecreated.jsp -->
 <div>
     <form action="lekceCreated.jsp" method="POST" accept-charset="UTF-8" id="lekceForm">
         <br>
+        <!-- Uživatel zadává název lekce-->
         <label for="lekcename">Název lekce:</label>
 
         <input type="text" id="lekcename" name="lekcename"><br>
         <br>
+        <!-- Uživatel zvolí kategorii -->
         <label for="category">Kategorie:</label>
 
         <select id="category" name="category">
@@ -37,14 +39,16 @@
         </select>
         <br>
         <br>
+        <!-- Textové pole do kterého se načte TinyMCE editor -->
         <textarea name="textarea"></textarea>
         <br>
+        <!-- Sumbit tlačítko na vytvoření lekce -->
         <input class="w3-button w3-black" type="SUBMIT" value="Vytvořit">
         <a href="lekce.jsp" class="w3-button w3-black">Zpět</a>
     </form>
 
 </div>
-
+<!-- Nastavení vzhledu a používaných pluginů u TinyMCE editoru -->
 <script>
     tinymce.init({
         selector: 'textarea',

@@ -26,6 +26,7 @@
 <body>
 <div style="text-align: center">
     <h1>Admin Login</h1>
+    <!-- Formular posilajici data do servletu login kvuli prihlaseni do admin panelu-->
     <form action="${pageContext.request.contextPath}/admin/login" method="post" id="loginForm">
         <label for="username">Username:</label>
         <input id="username" name="username" size="45"/>

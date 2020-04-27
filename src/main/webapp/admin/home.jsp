@@ -17,12 +17,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+<!-- Admin panel, zde se dají vytvářet nové lekce a testy-->
 <div style="text-align: center">
     <h1>Čejiny Admin Panel</h1>
+    <!-- Načtení přezdívky uživatele -->
     <b>Uživatel: ${adminUser.username}</b>
     <br><br>
+    <!-- Odhlášení uživatele-->
     <a class="w3-button w3-black" href="${pageContext.request.contextPath}/admin/logout">Logout</a>
+    <!-- Odkaz na přidání testu-->
     <a class="w3-button w3-black" href="addNewTest.jsp">Přidat test</a>
+    <!-- Odkaz na soubor lekce.jsp-->
     <a class="w3-button w3-black" href="lekce.jsp">Lekce</a>
 </div>
 </body>

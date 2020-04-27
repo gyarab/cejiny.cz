@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @author www.codejava.net
+ * Tento soubor jsem pouze trosku upravil, aby odkazoval na soubory na ktere potrebuji a predelal jsem komentare do cestiny
  */
 @WebFilter("/admin/*")
 public class AdminAuthenticationFilter implements Filter {
@@ -31,19 +32,18 @@ public class AdminAuthenticationFilter implements Filter {
         boolean isLoginPage = httpRequest.getRequestURI().endsWith("login.jsp");
 
         if (isLoggedIn && (isLoginRequest || isLoginPage)) {
-            // the admin is already logged in and he's trying to login again
-            // then forwards to the admin's homepage
+            // admin je jiz prihlaseny, ale snazi se prihlasit znovu
+            // prehodit admina na domovskou stranku (admin panel)
             RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
             dispatcher.forward(request, response);
 
         } else if (isLoggedIn || isLoginRequest) {
-            // continues the filter chain
-            // allows the request to reach the destination
+            // povoli pozadavku pokracovat do cilene destinace
             chain.doFilter(request, response);
 
         } else {
-            // the admin is not logged in, so authentication is required
-            // forwards to the Login page
+            // uzivatel neni prihlasen, authentikace pozadovana
+            // odkazat uzivatele na prihlasovaci stranku
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
 

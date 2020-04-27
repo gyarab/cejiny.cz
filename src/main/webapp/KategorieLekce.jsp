@@ -13,7 +13,7 @@
     <jsp:include page="menu.jsp"/>
 </head>
 <body>
-
+<!-- Zde jsou odkazy na kategorie lekci -->
 <div class="w3-panel w3-margin-left">
     <h3><u>Kategorie dle období</u></h3>
 </div>

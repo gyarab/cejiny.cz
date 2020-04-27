@@ -17,12 +17,14 @@
 <br>
 <%
     try {
+        // pripojeni k databazi a vybrani vsech dostupnych lekci
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("select * from lekce;");
 %>
 <div class="w3-container w3-mobile">
     <div class="w3-left-align w3-mobile">
+        <!-- Vytvoreni tabulky se vsemi dostupnymi lekcemi -->
         <ul class="w3-ul w3-hoverable w3-border w3-mobile" style="width: 30%">
             <%
                 while (rs.next()) {
@@ -36,6 +38,7 @@
 </div>
 <br>
 <%
+    //zavreni spojeni mezi databazi a souborem
     st.close();
     conn.close();
 } catch (Exception e) {

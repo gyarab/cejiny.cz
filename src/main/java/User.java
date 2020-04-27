@@ -1,8 +1,10 @@
 public class User {
+    // uzivatel bude mit id, uzivatelske jmeno a heslo
     private int id;
     private String username;
     private String password;
 
+    // gettery a settery pro nastaveni uzivatele
     public int getId() {
         return id;
     }

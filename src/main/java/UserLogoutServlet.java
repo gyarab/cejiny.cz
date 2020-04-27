@@ -15,8 +15,9 @@ public class UserLogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
+            //odhlaseni uzivatele adminUser
             session.removeAttribute("adminUser");
-
+            // nasmerovat uzivatele na login.jsp stranku pro dalsi pokracovani
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         }
