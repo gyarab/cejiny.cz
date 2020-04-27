@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<!-- Admin panel, zde se dají vytvářet nové lekce a testy-->
+<!-- Admin panel. Zde se vytváří nové lekce a testy-->
 <div style="text-align: center">
     <h1>Čejiny Admin Panel</h1>
-    <!-- Načtení přezdívky uživatele -->
+    <!-- Načítání přezdívky uživatele -->
     <b>Uživatel: ${adminUser.username}</b>
     <br><br>
     <!-- Odhlášení uživatele-->

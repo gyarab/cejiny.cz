@@ -36,7 +36,7 @@
         <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
             <%
                 /*
-                Zde se vypíše list všech lekcí, u kterých není udělaný test včetně počtu již hotových otázek, pokud v minulosti došlo k přerušení.
+                Zde se vypíše list všech lekcí, u kterých není vytvořený test včetně počtu již hotových otázek, pokud v minulosti došlo k přerušení.
                  */
                 while (rs.next()) {
                     String lName = rs.getString("name");

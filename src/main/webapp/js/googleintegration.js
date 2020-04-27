@@ -1,6 +1,6 @@
 <!-- Integrace google signin/out-->
 function onSuccess(googleUser) {
-    // pri uspesnem prihlaseni vytvori variable profile(informace o prihlasenem uzivateli) a idtoken(ID prihlaseneho uzivatele)
+    // při úspěšném přihlášení vytvoří variable profile(informace o přihlášeném uživateli) a idtoken(ID přihlášeného uživatele)
     var profile = googleUser.getBasicProfile();
     var id_token = profile.getId();
     // zneviditelni tlacitko na prihlaseni a ukaze tlacitko na prihlaseni
@@ -16,12 +16,12 @@ function onSuccess(googleUser) {
     document.getElementById("idtoken").value = id_token;
 }
 
-<!-- Pri neuspesnem prihlaseni napise error do console-->
+<!-- Pri neúspšsném přihlášení napíše error do konzole-->
 function onFailure(error) {
     console.log(error);
 }
 
-<!-- Nastaveni vzhledu prihlasovaciho tlacitka-->
+<!-- Nastavení vzhledu přihlašovacího tlačítka-->
 function renderButton() {
     gapi.signin2.render('my-signin2', {
         'scope': 'profile email',
@@ -31,23 +31,23 @@ function renderButton() {
         'onsuccess': onSuccess,
         'onfailure': onFailure
     });
-    //zneviditelni jmeno uzivatele (protoze ho nema), testy(nikdo neni prihlaseny) a odhlasovaci tlacitko(nikdo neni prihlaseny, takze se nepotrebuje odhlasovat)
+    //zneviditelní jméno uživatele (protože ho nemá), testy(nikdo není prihlášen) a odhlašovací tlačítko(nikdo není prihlášen, takže se nepotřebuje odhlašovat)
     document.getElementById("signout").style.visibility = "hidden";
     document.getElementById("userHide").style.visibility = "hidden";
     document.getElementById("testyHide").style.visibility = "hidden";
 }
 
-<!-- Nastaveni co ma udelat pri odhlaseni uzivatele-->
+<!-- Nastavení, co má udělat při odhlášení uživatele-->
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
         console.log('User signed out.');
     });
-    // zneviditelni odhlasovaci tlacitko, uzivatelske jmeno a testy, zviditelni prihlasovaci tlacitko
+    // zneviditelní odhlašovací tlačítko, uživatelské jméno a testy. Zviditelní přihlašovací tlačítko
     document.getElementById("signout").style.visibility = "hidden";
     document.getElementById("my-signin2").style.visibility = "visible";
     document.getElementById("userHide").style.visibility = "hidden";
     document.getElementById("testyHide").style.visibility = "hidden";
-    // po odhlaseni znovunacte stranku
+    // po odhlášení znovu načte stránku
     location.reload();
 }

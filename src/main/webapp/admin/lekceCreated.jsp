@@ -21,19 +21,19 @@
 </head>
 <body style="text-align: center">
 <%
-    // ziskani dat z addNewLesson, vytvoreni jmena souboru ze jmena lekce
+    // ziskání dat z addNewLesson, vytvoření jména souboru ze jména lekce
     request.setCharacterEncoding("UTF-8");
     String lekcename = request.getParameter("lekcename");
     String lowerNormalizedLekcename = lekcename.replaceAll(" ", "_").toLowerCase().replaceAll("[.|,]", "");
     String filename = Normalizer.normalize(lowerNormalizedLekcename, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "") + ".jsp";
-    // nastaveni cesty pro vytvoreni souboru
+    // nastavení cesty pro vytvoření souboru
     String mainPath = "src/main/webapp/lekce/";
-    // ziskani dat z TinyMCE editoru
+    // ziskání dat z TinyMCE editoru
     String text = request.getParameter("textarea");
     String pathCreate = mainPath + filename;
     String vysledek = "";
     try {
-        // vytvoreni souboru
+        // vytvoření souboru
         File strFile = new File(pathCreate);
         if (strFile.createNewFile()) {
             vysledek = "Nová lekce byla úspěšně vytvořena!";
@@ -56,7 +56,7 @@
             objWriter.write(cast1 + cast2 + lekcename + cast3 + text + "\n" + cast4);
             objWriter.flush();
             objWriter.close();
-            // konec vytvareni souboru, databaze zapis
+            // konec vytváření souboru, datábaze zápis
 
             String category = request.getParameter("category");
             String pathdb = "/lekce/" + filename;
@@ -75,7 +75,7 @@
                 e.printStackTrace();
             }
         } else {
-            // pokud existuje lekce se stejnym nazvem, tak se tento error odchyti a napise chybovou hlasku
+            // pokud existuje lekce se stejným názvem,tento error se odchytí a napíše chybovou hlášku
             vysledek = "Lekce s tímto názvem již existuje!";
         }
     } catch (IOException e) {
@@ -84,7 +84,7 @@
 
 
 %>
-<!-- Vypiš jestli se povedlo vytvorit lekci-->
+<!-- Vypiš, jestli se povedlo vytvorit lekci-->
 <h1><%=vysledek%>
 </h1>
 <br>

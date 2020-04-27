@@ -18,14 +18,14 @@
 <br>
 <%
     try {
-        // pripoji se k databazi a najde zapis pro zadanou kategorii
+        // připojí se k databázi a najde zápis pro zadanou kategorii
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE category= 'stredovek';");
 %>
 <div class="w3-container w3-mobile">
     <div class="w3-left-align">
-        <!-- vytvoreni listu dostupnych lekci -->
+        <!-- vytvoření listu dostupných lekcí -->
         <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
             <%
                 while (rs.next()) {
@@ -39,7 +39,7 @@
 </div>
 <br>
 <%
-    // zavrit spojeni mezi souborem a databazi
+    // zavřít spojení mezi souborem a databází
     st.close();
     conn.close();
 } catch (Exception e) {

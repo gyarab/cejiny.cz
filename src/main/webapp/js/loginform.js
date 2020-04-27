@@ -1,7 +1,7 @@
-<!-- jQuery hlida kazdeho kdo se snazi prihlasit, ze zada uzivatelske jmeno a heslo-->
+<!-- jQuery hlída každého, kdo se snaží přihlásit, že zadá uživatelské jméno a heslo-->
 $().ready(function() {
     $("#loginForm").validate({
-        // nastaveni pravidel co musi kazdy uzivatel splnit
+        // nastavení pravidel, které musí každý uživatel splnit
         rules: {
             username: {
                 required: true,
@@ -11,7 +11,7 @@ $().ready(function() {
                 required: true,
             }
         },
-        // zpravy co se vypisou pokud uzivatel nejake pravidlo nesplni
+        // zprávy, které se vypíšou, pokud uživatel nějaké pravidlo nesplní
         messages: {
             username: {
                 required: "Zadejte přezdívku",

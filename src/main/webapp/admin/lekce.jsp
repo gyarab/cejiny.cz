@@ -44,7 +44,7 @@
     </thead>
     <tbody>
     <%
-        // zjistit jestli je/není vytvořený test
+        // zjistit jestli je, nebo není vytvořený test
         while (rs.next()) {
             String test = "";
             if (!rs.getBoolean("test")) {

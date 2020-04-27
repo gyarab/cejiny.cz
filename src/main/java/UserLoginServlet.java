@@ -13,13 +13,13 @@ public class UserLoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // ziskat z requestu uzivatelske jmeno a heslo
+        // získat z requestu uživatelské jméno a heslo
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         UserDAO userDao = new UserDAO();
 
         try {
-            // zkontrolovat jestli jsou zadane udaje pravdive a pustit uzivatele dal
+            // zkontrolovat, jestli jsou zadané údaje pravdivé a pustit uživatele dál
             User user = userDao.checkLogin(username, password);
             String destPage = "login.jsp";
 

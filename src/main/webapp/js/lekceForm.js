@@ -1,14 +1,14 @@
-<!-- jQuery hlida aby vzdy kazdy zadal jmeno lekce a aby jmeno nemelo vic jak 40 znaku-->
+<!-- jQuery hlídá, aby vždy každý zadal jméno lekce, a aby jméno nemělo více jak 40 znaků-->
 $().ready(function () {
     $("#lekceForm").validate({
-        // nastaveni pravidel co musi uzivatel dodrzet
+        // nastavení pravidel, které musi uzivatel dodrzet
         rules: {
             lekcename: {
                 required: true,
                 maxlength: 40
             },
         },
-        // zpravy co se vypisou pokud uzivatel nejake pravidlo nesplni
+        // zprávy, které se vypíšou, pokud uživatel nějaké pravidlo nesplní
         messages: {
             lekcename: {
                 required: " Zadejte název lekce (max. 40 znaků).",

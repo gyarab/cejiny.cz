@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @author www.codejava.net
- * Tento soubor jsem pouze trosku upravil, aby odkazoval na soubory na ktere potrebuji a predelal jsem komentare do cestiny
+ * Tento soubor jsem pouze trochu upravil, aby odkazoval na soubory, na které potřebuji a předělal jsem komentáře do čestiny
  */
 @WebFilter("/admin/*")
 public class AdminAuthenticationFilter implements Filter {
