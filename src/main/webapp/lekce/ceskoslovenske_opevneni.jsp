@@ -22,7 +22,7 @@
             2000)</p>
         <p>Druhý program, rozšiřující opevnění na celý obvod hranic Československa byl schválen 5. června 1936. Tento
             plán však počítal s úplným využitím celé armády, a tudíž nezbydou síly na mobilní vojsko. Třetí a finální
-            program byl schválen 9. listopadu 1973. Tento plán prosadil ředitel Ředitelství opevňovacích prací Karel
+            program byl schválen 9. listopadu 1937. Tento plán prosadil ředitel Ředitelství opevňovacích prací Karel
             Husárek. Byla naplánována stavba dvousledových lehkých objektů vzor 37, takzvaných „řopíků“, které měly být
             postaveny na hranicích a na ústupových příčkách s tím, že v místech předpokládaného hlavního útoku by byly
             podpořeny těžkými objekty. Celkově mělo být postaveno 1276 těžkých a 15463 lehkých objektů.</p>
