@@ -8,8 +8,8 @@
 <!-- Na této stránce se vypisují všechny dostupné testy. -->
 <%
     try {
-        //Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+        //Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         String usI = request.getParameter("userID");
         Statement st = conn.createStatement();
         Statement st2 = conn.createStatement();
