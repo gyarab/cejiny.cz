@@ -52,7 +52,9 @@
             legionáře do Evropy. Poslední loď vyplula z Vladivostoku 2. září 1920. Za zmínku stojí i to, že se do
             přepravy legionářů zapojila první československá loď Legie.</p>
         <p style="text-align: center"> <img src="../images/legie.gif"/></p>
-        <p style="text-align: center">Fotografie lodi Legie, <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Cs.Legie.Lod.Legie.1920.gif/1024px-Cs.Legie.Lod.Legie.1920.gif">Zdroj</a></p>
+        <p style="text-align: center">Fotografie lodi Legie, <a target="_blank"
+                                                                href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Cs.Legie.Lod.Legie.1920.gif/1024px-Cs.Legie.Lod.Legie.1920.gif">Zdroj</a>
+        </p>
     </div>
 </div>
 </body>

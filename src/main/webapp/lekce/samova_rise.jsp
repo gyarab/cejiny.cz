@@ -36,8 +36,10 @@
             Dervanovi, který se po Wogatisburku přidal k Sámovi. Lze tedy soudit, že Sámova říše se nacházela mezi
             těmito dvěma areály a určitě zahrnovala i Čechy a Moravu. S ohledem na archeologické nálezy je
             pravděpodobné, že ústředí říše se na Moravě.</p>
-        <p style="text-align: center"> <img width="600"   src="../images/samovarise.png"/></p>
-        <p style="text-align: center">Pravděpodobná rozloha Sámovy říše, <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png/120px-S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png">Zdroj</a></p>
+        <p style="text-align: center"> <img width="600" src="../images/samovarise.png"/></p>
+        <p style="text-align: center">Pravděpodobná rozloha Sámovy říše, <a target="_blank"
+                                                                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png/120px-S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png">Zdroj</a>
+        </p>
     </div>
 </div>
 </body>

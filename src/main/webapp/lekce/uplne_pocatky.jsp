@@ -48,7 +48,9 @@
             natolik, že registrujeme prvé, nevýrazné stopy umělecké činnosti jako ryté čáry na kostech, používání barviv
             a jiné. Vyloučeny nejsou ani určité rituální praktiky.</p>
         <p style="text-align: center"> <img src="../images/kliny.jpg"/></p>
-        <p style="text-align: center">Ukázky pěstních klínů, <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biface_Cintegabelle_MHNT_PRE_2009.0.201.1_V2.jpg/1200px-Biface_Cintegabelle_MHNT_PRE_2009.0.201.1_V2.jpg">Zdroj</a></p>
+        <p style="text-align: center">Ukázky pěstních klínů, <a target="_blank"
+                                                                href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biface_Cintegabelle_MHNT_PRE_2009.0.201.1_V2.jpg/1200px-Biface_Cintegabelle_MHNT_PRE_2009.0.201.1_V2.jpg">Zdroj</a>
+        </p>
     </div>
 </div>
 </body>
