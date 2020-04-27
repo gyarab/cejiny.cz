@@ -53,7 +53,7 @@ Pokud se jedná o otázku typu přiřazovací, načtou se i data z dalších pot
     }
     try {
         /*
-        Poté proběhne zápis nového zaáznamu do databáze a pokud se jedná o 10. otázku změní se hodnota pro lekci, kdy
+        Poté proběhne zápis nového zaáznamu do databáze a pokud se jedná o 10. otázku, změní se hodnota pro lekci, kdy
          nadále pro ní není možné vytvářet otázky, ale je od tohoto momentu viditelná pro normálního přihlášeného uživatele.
          */
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));

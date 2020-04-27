@@ -30,7 +30,7 @@
 </div>
 
 <section class="w3-container">
-    <!-- Hlavní menu pro uživatelské stránky, je součásté všech stránek dostupných pro uživatele,
+    <!-- Hlavní menu pro uživatelské stránky, je součástí všech stránek dostupných pro uživatele,
     slouží pro rychlou orientaci a pohyb na našich stránkách. -->
     <div class="w3-bar w3-black w3-center">
         <!-- Založka v menu pro volbu lekcí-->
@@ -43,7 +43,7 @@
                     všech lekcí</a>
             </div>
         </div>
-        <!-- Záložka v menu pro volbu testů, dokud není uživatel přihlášen není k dispozici. -->
+        <!-- Záložka v menu pro volbu testů. Dokud není uživatel přihlášen, není k dispozici. -->
         <div id="testyHide" class="w3-dropdown-hover w3-hover-red w3-large w3-black w3-mobile">
             <button class="w3-button w3-hover-red"><i class="fas fa-brain fa-lg"></i> Testy
             </button>

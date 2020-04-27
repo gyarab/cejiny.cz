@@ -5,7 +5,7 @@
     <title>Seznam všech testů</title>
     <jsp:include page="menu.jsp"/>
 </head>
-<!-- Na této stránce se vypíší všechny dostupné testy. -->
+<!-- Na této stránce se vypisují všechny dostupné testy. -->
 <%
     try {
         Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
@@ -17,8 +17,8 @@
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE  test = true;");
         boolean isTest = false;
         /*
-        ResultSet rs slouží pro výpis všech dostupných testů.
-        ResultSet rs2 pak pro dohledání informací o předchozích výsledcích daného uživatele.
+        ResultSet rs slouží pro výpis všech dostupných testů,
+        ResultSet rs2 pak pro dohledávání informací o předchozích výsledcích daného uživatele.
          */
 %>
 <body>
@@ -68,7 +68,7 @@
         }
         if (!isTest) {
             /*
-            Pokud by v databázi neexistovala žádná lekce s 10 vytvořenými otázkami zobrazí se tento kód.
+            Pokud by v databázi neexistovala žádná lekce s 10 vytvořenými otázkami, zobrazí se tento kód.
              */
     %>
     <h2> Bohužel zatím není dostupný žádný test k vyplnění</h2>

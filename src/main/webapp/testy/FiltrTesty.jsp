@@ -18,13 +18,13 @@
         ResultSet rs;
         ResultSet rs2;
                 /*
-        ResultSet rs slouží pro výpis všech dostupných testů.
-        ResultSet rs2 pak pro dohledání informací o předchozích výsledcích daného uživatele .
+        ResultSet rs slouží pro výpis všech dostupných testů,
+        ResultSet rs2 pak pro dohledávání informací o předchozích výsledcích daného uživatele .
          */
 
         /*
         Switch-case nelze použit z důvodu starší verze Javy běžící v jsp - bez možnosti porovnání stringu.
-        Tento kód rozděluje dostupné testy podle kategorie do které téma zapadá.
+        Tento kód rozděluje dostupné testy podle kategorie, do které téma zapadá.
          */
         if (cat.equals("Pravěk")) {
             rs = st.executeQuery("SELECT * FROM lekce WHERE category= 'pravek' AND test = true;");
@@ -86,7 +86,7 @@
         }
         if (!isTest) {
               /*
-            Pokud by v databázi neexistovala žádná lekce v dané kategorii s 10 vytvořenými otázkami zobrazí se tento kód.
+            Pokud by v databázi neexistovala žádná lekce v dané kategorii s 10 vytvořenými otázkami, zobrazí se tento kód.
              */
     %>
     <h2> Bohužel zatím není dostupný žádný test k vyplnění</h2>
