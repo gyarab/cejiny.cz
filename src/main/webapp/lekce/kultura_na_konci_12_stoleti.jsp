@@ -24,7 +24,7 @@
             Hrabišici Kojata a Všebor však před rokem 1188 přivedli do Čech také nový řád, a to Strážce Božího hrobu,
             také někdy známé jako Křižovníci s červeným křížem, jejichž jediný klášter založili na Zderaze nedaleko
             Prahy.</p>
-        <p style="text-align: center"> <img src="../images/klasterlekcekultura.jpg"/></p>
+        <p style="text-align: center"> <img class="w3-mobile" src="../images/klasterlekcekultura.jpg"/></p>
         <p style="text-align: center">Pohled na klášter Velehrad, v popředí papežský dvojkříž, <a target="_blank"
                                                                                                   href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtGLif25SPpEwhEuv_G4cEXRagMnqlPiSRU6H36oP0QZJZS3P9HQ&s">Zdroj</a>
         </p>

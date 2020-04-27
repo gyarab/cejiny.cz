@@ -45,7 +45,7 @@
             Západním Německem prošli revitalizací a byly dlouho používány jako obraná postavení.</p>
         <p>Dnes zůstávají některé objekty pod správou Armády ČR, která je využívá jako sklady, jiné zase chátrají a
             některé jsou otevřené pro veřejnost. My můžeme návštěvu jakéhokoliv z nich pouze doporučit.</p>
-        <p style="text-align: center"> <img src="../images/map_cz.gif"/></p>
+        <p style="text-align: center"> <img class="w3-mobile" src="../images/map_cz.gif"/></p>
         <p style="text-align: center">Mapa rozmístění pevností, <a target="_blank"
                                                                    href="https://media1.7x.cz/images/media1:50ff05c7b52dd.png/map_cz.gif">Zdroj</a>
         </p>

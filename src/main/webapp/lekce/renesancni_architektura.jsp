@@ -13,8 +13,9 @@
             století se Čechách výjimečně objevují některé renesanční prvky, jako například při úpravě Vladislavského
             sálu na Pražském hradě, kdy jsou renesanční prvky viditelné na oknech, která připomínají okna vévodského
             paláce v Urbinu.</p>
-        <p style="text-align: center;"><img src="../images/oknolevo.jpg" alt="" width="300" height="400"/>      <img
-                src="../images/oknopravo.jpg" alt="" width="331" height="364"/></p>
+        <p style="text-align: center;"><img class="w3-mobile" src="../images/oknolevo.jpg" alt="" width="300"
+                                            height="400"/>      <img
+                class="w3-mobile" src="../images/oknopravo.jpg" alt="" width="331" height="364"/></p>
         <p style="text-align: center;">Porovnání oken z Il Palazzo Ducale di Urbino (vlevo), <a target="_blank"
                                                                                                 href="https://upload.wikimedia.org/wikipedia/commons/7/78/Palazzo_ducale_di_urbino%2C_esterno_06.JPG">Zdroj</a>
             a Vladislavského sálu (vpravo), <a target="_blank"
@@ -29,7 +30,8 @@
             který byl postaven na 2 části. První část postavil Paolo della Stella, který vybudoval přízemí s ochozem
             arkád a druhou postavil dvorní architekt císaře Ferdinanda I. Bonifác Wolmut, který k letohrádku přidal
             ještě patro a střechu. Bonifác Wolmut je taky jedním z architektů letohrádku Hvězda a mnohých dalších.</p>
-        <p style="text-align: center;"><img src="../images/letohradek-kralovny-anny.jpg" alt="" width="900"
+        <p style="text-align: center;"><img class="w3-mobile" src="../images/letohradek-kralovny-anny.jpg" alt=""
+                                            width="900"
                                             height="685"/></p>
         <p style="text-align: center;">Letohrádek královny Anny, <a target="_blank"
                                                                     href="https://cdn-vsh.prague.eu/object/880/letohradek-kralovny-anny.jpg">Zdroj</a>
@@ -52,7 +54,8 @@
             modernizace hradeb a bran. Hřbitovy byly posouvány na okraj města a byly k nim stavěny hřbitovní kostely.
             Stavěly se také špitály, zbrojnice a sedlové domy s podloubím. Věže se v té době nestavěly za účelem obrany,
             ale jako symbol bohatství a přepychu.</p>
-        <p style="text-align: center;"><img src="../images/husovonamesti.jpg" alt="" width="900" height="422"/></p>
+        <p style="text-align: center;"><img class="w3-mobile" src="../images/husovonamesti.jpg" alt="" width="900"
+                                            height="422"/></p>
         <p style="text-align: center;">Sedlové domy s podloubím z Nového Města nad Metují, <a target="_blank"
                                                                                               href="https://www.historickasidla.cz/galerie/obrazky/imager.php?img=525693&amp;x=4224&amp;y=1980&amp;hash=ddd19c6e4238f43e9bb4436be14406c8&amp;ratio=1">Zdroj</a> 
         </p>

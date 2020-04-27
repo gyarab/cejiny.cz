@@ -49,8 +49,10 @@
             stavělo jednotným způsobem a je pro něj typická kamenná lícovaná zeď, v níž jsou spuštěné svislé trámy,
             které ji zpevňují. Tyto stavby se však v našich klimatických a půdních podmínkách téměř neuchovaly, a tak
             bezprostřední doklady chybějí. </p>
-        <p style="text-align: center"> <img src="../images/hospodarskyvyvojlekce.jpg"/></p>
-        <p style="text-align: center">Keltský rotační mlýnek, <a target="_blank" href="https://boiohaemum.cz/gallery/keltove/3/02/03048_2.jpg">Zdroj</a></p>
+        <p style="text-align: center"> <img class="w3-mobile" src="../images/hospodarskyvyvojlekce.jpg"/></p>
+        <p style="text-align: center">Keltský rotační mlýnek, <a target="_blank"
+                                                                 href="https://boiohaemum.cz/gallery/keltove/3/02/03048_2.jpg">Zdroj</a>
+        </p>
     </div>
 </div>
 </body>

@@ -45,7 +45,7 @@
         <p>Král Fridrich Falcký hned další den po porážce utíká z Prahy do Vratislavi a Praha bezpodmínečně kapituluje.
             Vojáci vítězné armády vyplení důkladně celou Prahu. I jejich velitelé si s sebou odvážejí mnohé cennosti
             jako třeba umělecké sbírky Rudolfa II.</p>
-        <p style="text-align: center"> <img src="../images/tricetiletavalka.png"/></p>
+        <p style="text-align: center"> <img class="w3-mobile" src="../images/tricetiletavalka.png"/></p>
         <p style="text-align: center">Mapa znepřátelených stran, <a target="_blank"
                                                                     href="https://upload.wikimedia.org/wikipedia/commons/5/59/Map_Thirty_Years_War-en.svg">Zdroj</a>
         </p>
