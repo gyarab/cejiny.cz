@@ -25,6 +25,7 @@
 <div class="w3-container w3-mobile w3-margin-left">
 
     <br>
+    <h1>Vypis všech dosrupných testů</h1><br>
     <%
         /*
         Úkolem je vypsat všechny dostupné testy ve formě tlačítka, aby proběhlo přesměrování na samotný test s id daného testu.
@@ -42,7 +43,7 @@
     %>
 
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Vaše nejvyšší
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/> Vaše nejvyšší
         hodnocení: <%=n%>%<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
@@ -55,7 +56,7 @@
                  */
     %>
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/>Zatím
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/> Zatím
         nevyplněný test<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
