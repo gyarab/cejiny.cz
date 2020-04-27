@@ -66,7 +66,7 @@
                 */
     %>
 
-    <form action="testy/LoadTest.jsp" method="post" class="w3-container">
+    <form action="${pageContext.request.contextPath}/testy/LoadTest.jsp" method="post" class="w3-container">
         <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-white w3-hover-black w3-border "
                value='<%=lName%>'/> Vaše nejvyšší
         hodnocení: <%=n%>%<br>

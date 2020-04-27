@@ -44,7 +44,7 @@
             magistrálou. Legionáři se při své cestě do Vladivostoku setkali s bolševickým odporem. Nezkušená bolševická
             armáda však neměla šanci proti zkušeným a dobře ozbrojeným legionářům, kteří proti nim používali i obrněné
             vlaky.</p>
-        <p>6. srpna 1918, kde legionáři převzal ruský i zlatý státní poklad, který byl v té době největší na světě.
+        <p>6. srpna 1918 převzali legionáři ruský zatý poklad, který byl v té době největší na světě.
             Legionáři dobyli také Jekatěrinburg, ve kterém byl jen týden před dobytím popraven ruský car Mikuláš II. I
             se svou celou rodinou. Jelikož byla o 2 měsíce ukončena válka v Evropě, nechali bolševici radši legionáře
             projet, než aby s nimi museli bojovat. Legionáři tak kontrolovali úsek o délce okolo 8000 kilometrů, po
