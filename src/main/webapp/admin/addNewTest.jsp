@@ -38,7 +38,9 @@
                 /*
                 Zde se vypíše list všech lekcí, u kterých není vytvořený test včetně počtu již hotových otázek, pokud v minulosti došlo k přerušení.
                  */
+                int i = 0;
                 while (rs.next()) {
+                    i++;
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
                     Statement st2 = conn.createStatement();
@@ -51,6 +53,11 @@
                 <!-- Při kliknutí se tato stránka přepíše na editor tvorby otázek k danému tématu. -->
                 <%=lName %>, <%= num%>/10 otázek hotovo
             </li>
+            <%
+                }
+                if (i == 0) {
+            %>
+            <li class="w3-hover-black">Seznam s lekcemi bez vyplněného tetstu je prázdný.</li>
             <%}%>
         </ul>
     </div>

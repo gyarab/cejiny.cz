@@ -68,7 +68,7 @@ function loadTestInput(lekceName,lekceId,numero){
             '<select class="w3-select" name="option" id="option" onchange="addingForm()">\n' +
             '        <option value="" disabled selected>Vyberte druh otázky</option>\n' +
             '        <option value="1">Testová - 1 správná odpověď</option>\n' +
-            '        <option value="2">Testová - více správnývh odpovědí</option>\n' +
+            '        <option value="2">Testová - více správných odpovědí</option>\n' +
             '        <option value="3">Časová osa</option>\n' +
             '        <option value="4">Přiřazovací</option>\n' +
             '    </select>\n'  +
