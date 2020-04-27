@@ -16,7 +16,7 @@
             podnětem k povstání. Sámo, který v té době pobýval na slovanském území jako kupec, se projevil jako natolik
             zdatný vůdce, že nejen pomohl Slovanům k vítězství, ale ti si ho dokonce zvolili za „krále“.</p>
         <p>Fredegara na Sámově říši zaujala ještě jedna událost. Západním sousedem Sámova státního útvaru byla franská
-            říše, od roku 6269 vedená Dagobertem I. Podnětem ke vzájemnému střetu se stalo údajné přepadení franských
+            říše, od roku 629 vedená Dagobertem I. Podnětem ke vzájemnému střetu se stalo údajné přepadení franských
             kupců na slovanském území. Když franský velvyslanec Sicharius s žádostí o náhradu neuspěl, následovalo
             ozbrojené střetnutí. Franská říše vyslala v roce 631, nebo 632 proti Sámovi vojsko, které bylo rozděleno na
             3 části, aby se lépe mohlo uživit. Dvou částem se podařilo bez problémů projít, ale třetí část, složená
@@ -35,7 +35,7 @@
             jižní hranicí, mohli Avaři Slovany utlačovat. Jedinným dalším územním údajem je zpráva o Srbském vévodovi
             Dervanovi, který se po Wogatisburku přidal k Sámovi. Lze tedy soudit, že Sámova říše se nacházela mezi
             těmito dvěma areály a určitě zahrnovala i Čechy a Moravu. S ohledem na archeologické nálezy je
-            pravděpodobné, že ústředí říše se na Moravě.</p>
+            pravděpodobné, že ústředí říše se nacházelo na Moravě.</p>
         <p style="text-align: center"> <img class="w3-mobile" width="600" src="../images/samovarise.png"/></p>
         <p style="text-align: center">Pravděpodobná rozloha Sámovy říše, <a target="_blank"
                                                                             href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png/120px-S%C3%A1mova_%C5%99%C3%AD%C5%A1e.png">Zdroj</a>

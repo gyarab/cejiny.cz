@@ -12,7 +12,7 @@
             halštatskou dobu, což je starší doba železná. Laténská doba nese jméno podle osady La Tène u Neuchâtelského
             jezera ve Švýcarsku. Během této epochy, pěti století, se Keltové rozšířili z oblasti horního Rýna a horního
             Dunaje takřka po celé Evropě.</p>
-        <p>Hospodářský rozmach laténského období umožnila některá zlepšení v zemědělství, které se zdokonalilo navzdory
+        <p>Hospodářský rozmach laténského období umožnila některá zlepšení v zemědělství, které se zdokonalilo
             navzdory zhoršování klimatu.</p>
         <p>Především se zkvalitnila příprava půdy, díky železným nástrojům. Právě Keltové u nás začali používat k orbě
             železnou radlici. Na malých polích pěstovali pšenici, ječmen, žito, oves a proso, ale i luštěniny. Úroda se

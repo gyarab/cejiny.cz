@@ -16,7 +16,7 @@
             vedené Václavem Vilémem z Roupova. Do čela vojsk je postaven Jindřich Matyáš Thurn. Direktorium pak vysílá
             žádost do Evropy a zbylých zemí Habsburské monarchie. Odmítavě se vyjádřili moravští stavové, kladně se však
             vyjádřili stavové ze Slezska, Dolní Lužice a Horních a Dolních Rakous.</p>
-        <p>V srpnu 1916 byl Ferdinand II., který zdědil říši po zesnulém Matyášovi, sesazen generálním sněmem zemí
+        <p>V srpnu 1619 byl Ferdinand II., který zdědil říši po zesnulém Matyášovi, sesazen generálním sněmem zemí
             Koruny české z trůnu a byl nahrazen vůdcem Protestantské unie Fridrichem Falckým. Čeští stavové jeho
             zvolením doufali v podporu evropských velmocí, jelikož byl Fridrich příbuzný dánského krále, nizozemského
             místodržícího, a především anglického krále Jakuba I. Stuarta, jehož dceru si vzal za ženu. Ferdinand tuto

@@ -1,5 +1,5 @@
 function addingForm(){
-    <!-- V této funkci se vypíše skupina vstupů v zavislosti na zvoleném tzpu otázky. -->
+    // V této funkci se vypíše skupina vstupů v zavislosti na zvoleném typu otázky.
     var sele = document.getElementById('option');
 
     const button = document.getElementById('sendIt');
@@ -47,9 +47,11 @@ else if(sele.value==="4"){
 
 }
 }
+
+// V této funkci se vypíše volba typu otázky společně s dalšími potřebnými údaji, přepíší se předchozí data na
+//stránce, anebo se zobrazí finální obrazovka po přidání poslední otázky.
 function loadTestInput(lekceName,lekceId,numero){
-    <!--  V této funkci se vypíše volba typu otázky společně s dalšími potřebnými údaji, přepíší se předchozí data na
-    stránce, anebo se zobrazí finální obrazovka po přidání poslední otázky. -->
+
     document.getElementById("starting").innerHTML = '<h1>Vytváření otázky</h1>'
     numero++;
     if (numero === 11){
