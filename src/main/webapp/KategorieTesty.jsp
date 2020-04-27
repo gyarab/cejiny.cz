@@ -18,16 +18,18 @@
     <h3><u>Kategorie dle období</u></h3>
 </div>
 <!-- Tato stránka se zobrazí po kliknutí na kategorie testů a slouží pro výber dané kategorie. -->
-<div class="w3-container w3-mobile w3-margin-left">
-    <form action="testy/FiltrTesty.jsp" method="post" class="w3-container" id="categoriesT"><br><br>
+<div class="w3-mobile w3-margin-left">
+    <form action="testy/FiltrTesty.jsp" method="post" class="w3-container" id="categoriesT">
+        <input id='pravek' type='submit' name='action' class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red"
+               value="Pravěk"/><br><br>
+        <!--<input id='starovek' type='submit' name='action' class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red" value='Starověk'/><br><br>-->
+        <input id='stredovek' type='submit' name='action' class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red"
+               value='Středověk'/><br><br>
+        <input id='novovek' type='submit' name='action' class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red"
+               value='Novověk'/><br><br>
+        <input id='ceskoslovensko' type='submit' name='action'
+               class="w3-black w3-bar-item w3-button w3-mobile w3-hover-red" value='Československo'/><br><br>
         <input type="hidden" id="idtoken" name="userID" value=""/>
-        <input id='pravek' type='submit' name='action' class="w3-button w3-black" value="Pravěk"/><br><br>
-        <!--<input id='starovek' type='submit' name='action' class="w3-button w3-black" value='Starověk'/><br><br>-->
-        <input id='stredovek' type='submit' name='action' class="w3-button w3-black" value='Středověk'/><br><br>
-        <input id='novovek' type='submit' name='action' class="w3-button w3-black" value='Novověk'/><br><br>
-        <input id='ceskoslovensko' type='submit' name='action' class="w3-button w3-black"
-               value='Československo'/><br><br>
-
     </form>
 </div>
 </body>
