@@ -187,7 +187,7 @@
              */
         int vysledek = 100 * counter / 5;
         String usI = request.getParameter("userID");
-        rs = st.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "';");
+        rs = st.executeQuery("SELECT * FROM vysledky WHERE id_user='" + usI + "' AND lekceID=" + idL + ";");
         if (rs.next()) {
             int pVysledek = rs.getInt("result");
             if (pVysledek < vysledek) {
