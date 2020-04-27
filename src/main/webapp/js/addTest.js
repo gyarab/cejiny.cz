@@ -1,5 +1,7 @@
 function addingForm(){
     // V této funkci se vypíše skupina vstupů v zavislosti na zvoleném typu otázky.
+    // Systém doplňování kódu zdroj :"Add/remove HTML inside div using JavaScript"
+    // (https://stackoverflow.com/a/17650902/1735235)
     var sele = document.getElementById('option');
 
     const button = document.getElementById('sendIt');

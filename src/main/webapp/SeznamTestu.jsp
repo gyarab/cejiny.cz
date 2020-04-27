@@ -8,8 +8,8 @@
 <!-- Na této stránce se vypisují všechny dostupné testy. -->
 <%
     try {
-        Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
-        // Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
+        //Connection conn = DriverManager.getConnection(System.getenv("JDBC_DATABASE_URL"));
+        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?user=postgres&password=020201vscvvo");
         String usI = request.getParameter("userID");
         Statement st = conn.createStatement();
         Statement st2 = conn.createStatement();
@@ -25,7 +25,7 @@
 <div class="w3-container w3-mobile w3-margin-left">
 
     <br>
-    <h1>Vypis všech dosrupných testů</h1><br>
+    <h1>Výpis všech dostupných testů</h1><br>
     <%
         /*
         Úkolem je vypsat všechny dostupné testy ve formě tlačítka, aby proběhlo přesměrování na samotný test s id daného testu.
@@ -43,7 +43,8 @@
     %>
 
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/> Vaše nejvyšší
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-white w3-hover-black w3-border "
+               value='<%=lName%>'/> Vaše nejvyšší
         hodnocení: <%=n%>%<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
@@ -56,7 +57,8 @@
                  */
     %>
     <form action="testy/LoadTest.jsp" method="post" class="w3-container">
-        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-black" value='<%=lName%>'/> Zatím
+        <input id='<%= lName%>' type='submit' name='test' class="w3-button w3-white w3-hover-black w3-border "
+               value='<%=lName%>'/> Zatím
         nevyplněný test<br>
         <input name="test2" type="hidden" value="<%=idc%>"/>
     </form>
