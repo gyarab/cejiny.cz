@@ -191,7 +191,7 @@
         if (rs.next()) {
             int pVysledek = rs.getInt("result");
             if (pVysledek < vysledek) {
-                st.executeUpdate("UPDATE vysledky SET result =" + vysledek + "WHERE id_user='" + usI + "';");
+                st.executeUpdate("UPDATE vysledky SET result =" + vysledek + "WHERE id_user='" + usI + "'AND lekceID=" + idL + ";");
             }
         } else {
             st.executeUpdate("INSERT INTO vysledky (id_user,result,lekceID) VALUES ('" + usI + "'," + vysledek + "," + idL + ")");
