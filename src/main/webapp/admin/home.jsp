@@ -29,6 +29,8 @@
     <a class="w3-button w3-black" href="addNewTest.jsp">Přidat test</a>
     <!-- Odkaz na soubor lekce.jsp-->
     <a class="w3-button w3-black" href="lekce.jsp">Lekce</a>
+    <!-- Odkaz na editor otázek-->
+    <a class="w3-button w3-black" href="TestEdit.jsp">Editor Otázek</a>
 </div>
 </body>
 </html>
