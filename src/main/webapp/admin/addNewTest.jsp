@@ -32,13 +32,15 @@
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE test = false;");
 %>
 <div class="w3-container w3-mobile">
-    <div class="w3-left-align" id="setup">
-        <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
+    <div class="w3-left-align w3-mobile" id="setup">
+        <ul class="w3-ul w3-hoverable w3-border w3-mobile" style="width: 30%">
             <%
                 /*
                 Zde se vypíše list všech lekcí, u kterých není vytvořený test včetně počtu již hotových otázek, pokud v minulosti došlo k přerušení.
                  */
+                int i = 0;
                 while (rs.next()) {
+                    i++;
                     String lName = rs.getString("name");
                     int idc = rs.getInt("id");
                     Statement st2 = conn.createStatement();
@@ -47,10 +49,15 @@
                     int num = rs2.getInt(1);
                     st2.close();
             %>
-            <li class="w3-hover-black" onclick="loadTestInput('<%=lName %>', <%=idc %>, <%=num %>)">
+            <li class="w3-hover-black w3-mobile" onclick="loadTestInput('<%=lName %>', <%=idc %>, <%=num %>)">
                 <!-- Při kliknutí se tato stránka přepíše na editor tvorby otázek k danému tématu. -->
                 <%=lName %>, <%= num%>/10 otázek hotovo
             </li>
+            <%
+                }
+                if (i == 0) {
+            %>
+            <li class="w3-hover-black w3-mobile">Seznam s lekcemi bez vyplněného tetstu je prázdný.</li>
             <%}%>
         </ul>
     </div>
@@ -62,5 +69,6 @@
     e.printStackTrace();
     }
 %>
+<br><a class="w3-button w3-black" href="home.jsp">Zpět</a>
 </body>
 </html>

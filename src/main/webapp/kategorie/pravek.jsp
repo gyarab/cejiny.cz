@@ -24,14 +24,14 @@
         ResultSet rs = st.executeQuery("SELECT * FROM lekce WHERE category= 'pravek';");
 %>
 <div class="w3-container w3-mobile">
-    <div class="w3-left-align">
+    <div class="w3-left-align w3-mobile">
         <!-- vytvoření listu dostupných lekcí -->
-        <ul class="w3-ul w3-hoverable w3-border" style="width: 30%">
+        <ul class="w3-ul w3-hoverable w3-border w3-mobile" style="width: 30%">
             <%
                 while (rs.next()) {
             %>
-            <li class="w3-hover-black"><a style="text-decoration:none"
-                                          href="${pageContext.request.contextPath}<%=rs.getString("path") %>"><%=rs.getString("name") %>
+            <li class="w3-hover-black w3-mobile"><a style="text-decoration:none"
+                                                    href="${pageContext.request.contextPath}<%=rs.getString("path") %>"><%=rs.getString("name") %>
             </a></li>
             <%}%>
         </ul>
