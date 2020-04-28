@@ -42,7 +42,7 @@ Pokud se jedná o otázku typu přiřazovací, načtou se i data z dalších pot
             moznost7 = request.getParameter("odpoved7");
         }
             /*
-            Pak proběhne samotná aktualizace záznamu v databázi
+            Poté proběhne samotná aktualizace záznamu v databázi
              */
         st.executeUpdate("UPDATE otazky SET otazka='" + dotaz + "',odpoved='" + odpovedS + "',moznosti0='" + moznost0 + "'" +
                 ",moznosti1='" + moznost1 + "',moznosti2='" + moznost2 + "',moznosti3='" + moznost3 + "'" +
@@ -60,7 +60,7 @@ Pokud se jedná o otázku typu přiřazovací, načtou se i data z dalších pot
     e.printStackTrace();
 
 %>
-<!-- Pokud nastane chyba program to oznámí a nasměruje zpět na administrátorské menu-->
+<!-- Pokud nastane chyba, program to oznámí a nasměruje uživatele zpět na administrátorské menu-->
 <h2> Nastala chyba při ukládání, zkuste celý proces prosím znovu </h2>
 <a href="login.jsp" class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">Navrátit se do základního menu</a>
 <%
