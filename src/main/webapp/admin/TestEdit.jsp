@@ -57,5 +57,7 @@
         e.printStackTrace();
     }
 %>
+<br><a class="w3-button w3-black" href="home.jsp">Zpět</a>
 </body>
+
 </html>
